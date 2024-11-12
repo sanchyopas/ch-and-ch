@@ -1,0 +1,310 @@
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 400px;
+  padding: 222px 0px 50px;
+
+  .container {
+    height: 100%;
+  }
+
+  // .hero__inner
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  // .hero__title
+
+  &__title {
+    p {
+      color: rgba($color: #ffffff, $alpha: 1.0);
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: 2%;
+      text-transform: uppercase;
+    }
+  }
+
+  // .hero__btn
+
+  &__btn {
+    margin-top: 60px;
+  }
+
+  // .hero__logos
+
+  &__logos {
+    margin-top: 146px;
+  }
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+  animation: scroll 20s linear infinite;
+
+  & img:hover & {
+    animation-play-state: paused;
+  }
+}
+
+
+.invite {
+
+  .container {
+    border-bottom: 1px solid rgba($color: #141414, $alpha: .3);
+  }
+
+  // .invite__title
+
+  &__title {}
+
+  // .invite__subtitle
+
+  &__subtitle {
+    margin-top: 8px;
+    color: rgb(101, 104, 76);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 112%;
+  }
+
+  // .invite__slider
+
+  &__slider {
+    margin-top: 60px;
+  }
+
+  // .invite__action
+
+  &__action {
+    display: grid;
+    justify-items: center;
+    gap: 40px;
+    margin: 60px 0px 0px;
+    padding: 40px 24px;
+    border-radius: 24px;
+    background: rgb(101, 104, 76);
+
+    h3 {
+      color: rgba($color: #ffffff, $alpha: 1.0);
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 112%;
+    }
+  }
+
+  // .invite__btn
+
+  &__btn {}
+
+}
+
+.card {
+  height: 376px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  border-radius: 24px;
+  background-size: cover;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180.00deg, rgba(20, 20, 20, 0.1), rgb(20, 20, 20) 100%);
+  }
+
+  @media screen and (min-width: 520px) {
+    height: 480px;
+  }
+
+  // .invite-card__icon
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    border-radius: 80px;
+    backdrop-filter: blur(24px);
+    background: rgba($color: #ffffff, $alpha: .3);
+  }
+
+  // .invite-card__content
+
+  &__content {
+    display: grid;
+    gap: 24px;
+    position: relative;
+  }
+
+  // .invite-card__title
+
+  &__title {
+    color: rgba($color: #ffffff, $alpha: 1.0);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 112%;
+  }
+
+  // .invite-card__text
+
+  &__text {
+    color: rgba($color: #ffffff, $alpha: 1.0);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 150%;
+  }
+
+  // .card__tags
+
+  &__tags {}
+
+  // .card__tag
+
+  &__tag {}
+
+  // .card__count
+
+  &__count {}
+
+  // .card__number
+
+  &__number {}
+}
+
+.projects {
+
+  // .projects__inner
+
+  &__inner {}
+
+  // .projects__title
+
+  &__title {}
+
+  // .projects__filter
+
+  &__filter {}
+
+  // .projects__grid
+
+  &__grid {}
+
+  // .projects__card
+
+  &__card {}
+
+  // .projects__buttons
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 60px;
+  }
+
+  // .projects__btn--dark
+
+  &__btn--dark {
+    background: rgb(101, 104, 76);
+  }
+
+  // .projects__btn
+
+  &__btn {
+    background: rgba(101, 104, 76, 0.1);
+    color: rgb(101, 104, 76);
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+  margin: 60px 0px 40px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  // .filter__btn
+
+  &__btn {
+    min-width: 186px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 40px;
+    background: rgba(101, 104, 76, 0.1);
+    color: rgb(101, 104, 76);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.implement {
+
+  // .implement__inner
+
+  &__inner {
+    display: grid;
+    justify-items: center;
+    gap: 60px;
+    border-top: 1px solid rgba($color: #141414, $alpha: 1.0);
+    border-bottom: 1px solid rgba($color: #141414, $alpha: 1.0);
+  }
+
+  // .implement__text
+
+  &__text {
+    max-width: 1090px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    p {
+      color: rgb(101, 104, 76);
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    img {
+      width: 160px;
+      height: 72px;
+      border-radius: 80px;
+    }
+  }
+
+  // .implement__btn
+
+  &__btn {}
+}
