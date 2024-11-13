@@ -28,7 +28,11 @@
 
   // .header__nav
 
-  &__nav {}
+  &__nav {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
 
   // .header__actions
 
@@ -36,6 +40,10 @@
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   // .header__phone
@@ -50,6 +58,14 @@
   &__lang {
     color: rgba($color: #ffffff, $alpha: 1.0);
     font-weight: 300;
+  }
+
+  // .header__burger
+
+  &__burger {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 }
 
