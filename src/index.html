@@ -6,7 +6,7 @@
   @@include('html/_header.html')
 
   <main>
-    <section class="hero" style="background-image: url(img/hero-image@3x.jpg)">
+    <section class="hero" id="hero" style="background-image: url(img/hero-image@3x.jpg)">
       <div class="container">
         <div class="hero__inner">
           <div class="hero__title">
@@ -14,7 +14,7 @@
             <p>Коммерческих интерьеров</p>
             <p>Любой сложности, более 25 лет</p>
           </div>
-          <button type="button" class="hero__btn _btn">Обсудить проект</button>
+          <button type="button" data-popup="leed-from" class="hero__btn _btn">Обсудить проект</button>
         </div>
       </div>
       <div class="hero__logos logos" id="logos">
@@ -79,7 +79,7 @@
           </div>
           <div class="invite__action">
             <h3>Давайте создавать пространства вместе</h3>
-            <button type="button" class="invite__btn _btn">Обсудить условия</button>
+            <button type="button" data-popup="discuss-terms" class="invite__btn _btn">Обсудить условия</button>
           </div>
         </div>
       </div>
@@ -153,32 +153,31 @@
                 </div>
               </div>
             </div>
-            <div class="projects__card card" style="background-image: url(img/images/project-dodo.jpg)">
+            <div class="projects__card card" style="background-image: url(img/images/project-food.jpeg)">
               <div class="card__content">
                 <div class="card__tags">
                   <a href="" class="card__tag">
-                    <img src="@img/logo-dodo.png" alt="" />
-                    <span>Dodo Пицца</span>
+                    <span>Сеть ресторанов быстрого питания</span>
                   </a>
                   <a href="" class="card__tag">
                     <span>2022</span>
                   </a>
                 </div>
                 <div class="card__count">
-                  <p class="card__number">400</p>
-                  <p class="card__text">человек уместили на площади 45м2</p>
+                  <p class="card__number">450</p>
+                  <p class="card__text">пунктов быстрого обслуживания с полной комплектацией</p>
                 </div>
               </div>
             </div>
-            <div class="projects__card card" style="background-image: url(img/images/project-dodo.jpg)">
+            <div class="projects__card card" style="background-image: url(img/images/project-beeline.jpeg)">
               <div class="card__content">
                 <div class="card__tags">
                   <a href="" class="card__tag">
-                    <img src="@img/logo-dodo.png" alt="" />
-                    <span>Dodo Пицца</span>
+                    <img src="@img/logo-beeline.png" alt="" />
+                    <span>Билайн</span>
                   </a>
                   <a href="" class="card__tag">
-                    <span>2022</span>
+                    <span>2023</span>
                   </a>
                 </div>
                 <div class="card__count">
@@ -189,21 +188,22 @@
             </div>
           </div>
           <div class="projects__buttons">
-            <a href="" class="projects__btn--dark _btn">Смотреть все</a>
-            <a href="" class="projects__btn _btn">Проекты сайта «Фабрикант» <img src="@img/icons/link.svg" alt="" /></a>
+            <a href="/projects.html" class="projects__btn--dark _btn">Смотреть все</a>
+            <a href="https://fabrikant.su/project/" class="projects__btn _btn" target="_blank">Проекты сайта «Фабрикант»
+              <img src="@img/icons/link.svg" alt="" /></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="steps _padded-section" style="background-image: url(img/images/steps-bg.jpg)">
+    <section class="steps _padded-section" id="steps" style="background-image: url(img/images/steps-bg.jpg)">
       <div class="container">
         <div class="steps__inner">
           <h2 class="steps__title _title">7 шагов от идеи до воплощения</h2>
           <p class="steps__subtitle">
             Совместно пройдем от идеи и наброска, <br> до готового к эксплуатации бизнес-пространства
           </p>
-          <button type="button" class="steps__btn _btn">Воплотить идею</button>
+          <button type="button" data-popup="leed-from" class="steps__btn _btn">Воплотить идею</button>
           <div class="steps__list">
             <div class="step">
               <div class="step__left">
@@ -303,7 +303,7 @@
       </div>
     </section>
 
-    <section class="doc _padded-section">
+    <section class="doc _padded-section" id="docs">
       <div class="container">
         <h2 class="doc__title _title">Документация</h2>
         <div class="doc__grid grid-doc">
@@ -382,7 +382,7 @@
       </div>
     </section>
 
-    <section class="contact _padded-section">
+    <section class="contact _padded-section" id="contact">
       <div class="container">
         <h2 class="contact__title _title">Контакты</h2>
         <div class="contact__map map" id="moskow">
@@ -434,6 +434,7 @@
   </main>
 
   @@include('html/_footer.html')
+  @@include('html/_popup.html')
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     // init Swiper:

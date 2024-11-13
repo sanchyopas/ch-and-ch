@@ -16,6 +16,7 @@
 @import "global.scss";
 @import "page.scss";
 @import "animations.scss";
+@import "popup.scss";
 
 * {
   outline: none;
@@ -26,6 +27,7 @@
 
 html {
   height: 100%;
+  position: relative;
 }
 
 body {

@@ -5,6 +5,15 @@
   padding: 13px 0px;
   width: 100%;
 
+  &--white {
+
+    .nav__link,
+    .header__phone,
+    .header__lang {
+      color: rgba($color: #141414, $alpha: 1.0);
+    }
+  }
+
   // .header__inner
 
   &__inner {
@@ -29,7 +38,7 @@
   // .header__nav
 
   &__nav {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       display: none;
     }
   }
@@ -39,11 +48,19 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 24px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       display: none;
     }
+  }
+
+  // .header__actions-wrap
+
+  &__actions-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   // .header__phone
@@ -63,9 +80,17 @@
   // .header__burger
 
   &__burger {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       display: none;
     }
+  }
+
+  // .header__social
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
 

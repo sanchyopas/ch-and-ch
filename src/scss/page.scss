@@ -309,6 +309,15 @@
 
   &__title {}
 
+  // .projects__subtitle
+  &__subtitle {
+    margin-top: 8px;
+    color: rgba(20, 20, 20, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
   // .projects__filter
 
   &__filter {}
