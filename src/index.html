@@ -74,6 +74,8 @@
                 </div>
               </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
           <div class="invite__action">
             <h3>Давайте создавать пространства вместе</h3>
@@ -309,14 +311,17 @@
             <p class="grid-doc__title">Соглашение о сотрудничестве</p>
             <ul class="grid-doc__list">
               <li>
+                <img src="" alt="">
                 <a href="">Договор поставки рамочный.pdf</a>
                 <span>181 КБ</span>
               </li>
               <li>
+                <img src="" alt="">
                 <a href="">Соглашение NDA.pdf</a>
                 <span>181 КБ</span>
               </li>
               <li>
+                <img src="" alt="">
                 <a href="">Агентский договор.pdf</a>
                 <span>181 КБ</span>
               </li>
@@ -326,15 +331,49 @@
             <p class="grid-doc__title">3D библиотека</p>
             <ul class="grid-doc__list">
               <li>
+                <img src="@img/icons/Web.svg" alt="">
                 <a href="">Облако с 3D моделями</a>
                 <span>html</span>
               </li>
+            </ul>
+          </div>
+          <div class="grid-doc__item">
+            <p class="grid-doc__title">Промо-материалы</p>
+            <ul class="grid-doc__list">
               <li>
+                <img src="" alt="">
+                <a href="">Презентация компании.pdf</a>
+                <span>181 КБ</span>
+              </li>
+              <li>
+                <img src="" alt="">
                 <a href="">Соглашение NDA.pdf</a>
                 <span>181 КБ</span>
               </li>
               <li>
+                <img src="" alt="">
                 <a href="">Агентский договор.pdf</a>
+                <span>181 КБ</span>
+              </li>
+            </ul>
+          </div>
+          <div class="grid-doc__item">
+            <p class="grid-doc__title">Производственная документация</p>
+            <ul class="grid-doc__list">
+              <li>
+                <img src="" alt="">
+                <a href="">Декларация соответствия Евразийского экономического союза.pdf</a>
+                <span>181 КБ</span>
+              </li>
+              <li>
+                <img src="" alt="">
+                <a href="">Заключение Минпромторга о подтверждении производства промышленной продукции на территории
+                  РФ.pdf</a>
+                <span>181 КБ</span>
+              </li>
+              <li>
+                <img src="" alt="">
+                <a href="">Сертификат соответсвия “Промтехтандарт”.pdf </a>
                 <span>181 КБ</span>
               </li>
             </ul>
@@ -346,13 +385,16 @@
     <section class="contact _padded-section">
       <div class="container">
         <h2 class="contact__title _title">Контакты</h2>
-        <div class="contact__map map" id="moskow" style="background-image: url(img/moskow-map.jpeg)">
-          <div class="map__head">
+        <div class="contact__map map" id="moskow">
+          <div class="map__head" style="background-image: url(img/moskow-map.jpeg)">
             <div class="map__tabs">
               <button type="button" class="_btn--dark">Москва</button>
               <button type="button" class="map__btn _btn">Рязань</button>
             </div>
-            <a href="" class="map__link _btn">Открыть в Яндекс Картах <img src="@img/icons/link.svg" alt="" /></a>
+            <a href="" class="map__link _btn">
+              <span>Открыть в Яндекс Картах</span>
+              <img src="@img/icons/link.svg" alt="" />
+            </a>
           </div>
           <div class="map__contact">
             <p class="map__text">
@@ -400,6 +442,26 @@
       loop: false,
       spaceBetween: 24,
       autoHeight: false,
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: false,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      },
     });
   </script>
   <script src="js/app.min.js"></script>
