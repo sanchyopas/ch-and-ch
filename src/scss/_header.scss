@@ -6,6 +6,9 @@
   width: 100%;
 
   &--white {
+    .header__logo {
+      background-image: url('/img/logo-ch-ch-black.svg');
+    }
 
     .nav__link,
     .header__phone,
@@ -23,11 +26,12 @@
     gap: 20px;
   }
 
-  // .header__log
+  // .header__logo
 
   &__logo {
-    max-width: 86px;
-    max-height: 40px;
+    width: 86px;
+    height: 40px;
+    background-image: url('/img/logo-ch-ch.svg');
 
     img {
       width: 100%;
@@ -91,6 +95,33 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    a {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      &:nth-child(1) {
+        background-image: url('/img/icons/Telegram-black.svg');
+      }
+
+      &:nth-child(2) {
+        background-image: url('/img/icons/Vk-black.svg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('/img/icons/Zen-black.svg');
+      }
+
+      &:nth-child(4) {
+        background-image: url('/img/icons/Whatsapp-black.svg');
+      }
+    }
+
+
   }
 }
 

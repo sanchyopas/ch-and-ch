@@ -4,14 +4,15 @@ functions.isWebp();
 
 const bodyLock = (e) => {
   let widthScrollBar = window.innerWidth - document.documentElement.clientWidth;
-  // document.querySelector('.header').style.paddingRight = widthScrollBar + 'px';
-  // document.documentElement.style.paddingRight = widthScrollBar + 'px';
+
+  document.querySelector('.header').style.paddingRight = widthScrollBar + 'px';
+  document.documentElement.style.marginRight = widthScrollBar + 'px';
   document.documentElement.classList.add('_lock');
 }
 
 const bodyUnLock = (e) => {
-  // document.documentElement.style.marginRight = '0px';
-  // document.querySelector('.header').style.paddingRight = '0px';
+  document.documentElement.style.marginRight = '0px';
+  document.querySelector('.header').style.marginRight = '0px';
   document.documentElement.classList.remove('_lock');
 }
 
@@ -113,4 +114,18 @@ if (popupBtn) {
 const closePopupBtn = document.querySelectorAll('.popup__close');
 if (closePopupBtn) {
   closePopupBtn.forEach(btn => btn.addEventListener('click', closePopup))
+}
+
+// Переключатель карты
+const showMap = (e) => {
+  console.log('click');
+
+  document.querySelectorAll('.map').forEach(map => map.classList.remove('_active'));
+  document.getElementById(e.currentTarget.dataset.id).classList.add('_active');
+}
+
+
+const mapTabBtn = document.querySelectorAll('[data-id]');
+if (mapTabBtn) {
+  mapTabBtn.forEach(btn => btn.addEventListener('click', showMap))
 }

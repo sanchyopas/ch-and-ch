@@ -14,6 +14,14 @@ a {
   text-decoration: none;
 }
 
+picture {
+  font-size: 0;
+}
+
+img {
+  display: block;
+}
+
 h1 {
   margin: 0;
 }
@@ -62,11 +70,12 @@ button {
 
 ._title {
   color: rgb(101, 104, 76);
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 400;
   line-height: 120%;
   letter-spacing: .6px;
   text-transform: uppercase;
+  text-wrap: middle;
 
 
   @media screen and (max-width: 1200px) {
@@ -79,5 +88,17 @@ button {
 
   @media screen and (max-width: 992px) {
     font-size: 32px;
+  }
+}
+
+._mb {
+  @media screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+._pc {
+  @media screen and (max-width: 768px) {
+    display: none !important;
   }
 }

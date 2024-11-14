@@ -2,12 +2,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 400px;
-  padding: 222px 0px 50px;
+  min-height: 658px;
+  height: 100vh;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media screen and (max-width: 768px) {
-    padding: 136px 0px 40px;
+    padding: 40px 0px;
   }
+
 
   .container {
     height: 100%;
@@ -31,7 +36,7 @@
       font-size: 60px;
       font-weight: 400;
       line-height: 120%;
-      letter-spacing: 2%;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
 
       @media screen and (max-width: 1200px) {
@@ -64,11 +69,7 @@
     display: flex;
     overflow: hidden;
     width: 100%;
-    margin-top: 146px;
-
-    @media screen and (max-width: 768px) {
-      margin-top: 75px;
-    }
+    opacity: .6;
   }
 }
 
@@ -79,6 +80,109 @@
   align-items: center;
   gap: 80px;
 }
+
+.offer {
+  overflow: hidden;
+  padding: 240px 0px 229px;
+
+  @media screen and (max-width: 992px) {
+    padding: 120px 0px 340px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 60px 0px 340px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  // .offer__content
+
+  &__content {
+    max-width: 1073px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+
+  // .offer__title
+
+  &__title {
+    text-transform: none;
+
+  }
+
+  // .offer__subtitle
+
+  &__subtitle {
+    max-width: 608px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+    color: rgb(101, 104, 76);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 112%;
+
+    @media screen and (max-width: 992px) {
+      font-size: 24px;
+    }
+  }
+
+  // .offer__image
+
+  &__image {
+    position: absolute;
+
+    &:nth-child(1) {
+      width: 200px;
+      height: 240px;
+      top: -120px;
+      left: -60px;
+
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 280px;
+      height: 336px;
+      bottom: 80px;
+      right: -150px;
+
+      @media screen and (max-width: 1595px) {
+        width: 160px;
+        height: 192px;
+        bottom: -252px;
+        right: 24px;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 240px;
+      height: 288px;
+      bottom: -152px;
+      left: 20px;
+
+      @media screen and (max-width: 1595px) {
+        width: 120px;
+        height: 144px;
+        bottom: -280px;
+        left: 24px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+  }
+}
+
 
 .invite {
 
@@ -194,6 +298,18 @@
     height: 480px;
   }
 
+  // .card__link
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+  }
+
   // .invite-card__icon
 
   &__icon {
@@ -255,7 +371,7 @@
     color: rgb(255, 255, 255);
     font-size: 60px;
     font-weight: 400;
-    letter-spacing: 2%;
+    letter-spacing: 1.2px;
     line-height: 0.8;
 
     @media screen and (max-width: 992px) {
@@ -657,6 +773,7 @@
 
       img {
         grid-row: span 2;
+        margin-top: 5px;
       }
 
       a {
@@ -683,71 +800,6 @@
   }
 }
 
-
-.implement {
-
-  // .implement__inner
-
-  &__inner {
-    display: grid;
-    justify-items: center;
-    gap: 60px;
-    border-top: 1px solid rgba($color: #141414, $alpha: 1.0);
-    border-bottom: 1px solid rgba($color: #141414, $alpha: 1.0);
-
-    @media screen and (max-width: 768px) {
-      gap: 40px;
-    }
-  }
-
-  // .implement__text
-
-  &__text {
-    max-width: 1090px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    text-align: center;
-
-    @media screen and (max-width: 1200px) {
-      gap: 0px 15px;
-    }
-
-    p {
-      color: rgb(101, 104, 76);
-      font-size: 60px;
-      font-weight: 400;
-      line-height: 120%;
-
-      @media screen and (max-width: 1200px) {
-        font-size: 45px;
-      }
-
-      @media screen and (max-width: 992px) {
-        font-size: 36px;
-      }
-    }
-
-    img {
-      width: 160px;
-      height: 72px;
-      border-radius: 80px;
-
-      @media screen and (max-width: 992px) {
-        width: 88px;
-        height: 40px;
-      }
-    }
-  }
-
-  // .implement__btn
-
-  &__btn {}
-}
-
 .contact {
 
   // .contact__title
@@ -763,6 +815,11 @@
 
 .map {
   position: relative;
+  display: none;
+
+  &._active {
+    display: block;
+  }
 
   // .map__head
 
@@ -804,11 +861,9 @@
 
   &__link {
     color: rgb(101, 104, 76);
-    font-family: Aeonik Pro TRIAL;
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: 0%;
     text-align: left;
     border-radius: 40px;
     backdrop-filter: blur(24px);
@@ -914,6 +969,23 @@
     gap: 24px;
     padding-left: calc((100vw - 1280px) / 2);
     margin-left: 24px;
+
+    @media screen and (max-width: 1200px) {
+      padding-left: calc((100vw - 960px) / 2);
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-left: calc((100vw - 720px) / 2);
+    }
+
+    @media screen and (max-width: 768px) {
+      padding-left: calc((100vw - 540px) / 2);
+    }
+
+    @media screen and (max-width: 578px) {
+      padding-left: 24px;
+      margin-left: 0px;
+    }
 
     @media screen and (max-width: 655px) {
       flex-direction: column;
@@ -1242,7 +1314,31 @@
   }
 }
 
+.full-screen-image {
+  height: 100vh;
+  min-height: 240px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+
+  @media screen and (max-width: 1024px) {
+    height: 520px;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 350px;
+  }
+
+  @media screen and (max-width: 615px) {
+    height: 240px;
+  }
+}
+
 .interiors-slider {
+  display: none;
+  position: relative;
 
   // .interiors-slider__slider
 
@@ -1255,12 +1351,15 @@
   // .interiors-slider__slide
 
   &__slide {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     width: 100%;
     height: 100vh;
     min-height: 240px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .swiper {}
@@ -1277,7 +1376,20 @@
 
   .swiper-container {}
 
-  .thumbs-slider {}
 
   .swiper-slide {}
+}
+
+.thumbs-slider {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+
+  // .thumbs-slider__slide
+
+  &__slide {
+    width: 200px;
+    height: 15px;
+  }
 }
