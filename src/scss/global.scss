@@ -6,13 +6,16 @@
   }
 }
 
-ul,
-li {
+ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  margin: 0;
 }
 
 button {
@@ -62,7 +65,7 @@ button {
   font-size: 50px;
   font-weight: 400;
   line-height: 120%;
-  letter-spacing: 2%;
+  letter-spacing: .6px;
   text-transform: uppercase;
 
 
