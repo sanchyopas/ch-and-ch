@@ -4,14 +4,14 @@ functions.isWebp();
 
 const bodyLock = (e) => {
   let widthScrollBar = window.innerWidth - document.documentElement.clientWidth;
-  document.querySelector('.header').style.paddingRight = widthScrollBar + 'px';
+  // document.querySelector('.header').style.paddingRight = widthScrollBar + 'px';
   // document.documentElement.style.paddingRight = widthScrollBar + 'px';
   document.documentElement.classList.add('_lock');
 }
 
 const bodyUnLock = (e) => {
   // document.documentElement.style.marginRight = '0px';
-  document.querySelector('.header').style.paddingRight = '0px';
+  // document.querySelector('.header').style.paddingRight = '0px';
   document.documentElement.classList.remove('_lock');
 }
 
