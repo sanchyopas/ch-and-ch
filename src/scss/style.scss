@@ -27,10 +27,11 @@
 
 html {
   height: 100%;
-  position: relative;
+
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -41,6 +42,6 @@ body {
   font-family: $main_font;
 
   main {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
   }
 }

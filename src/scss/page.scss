@@ -61,6 +61,9 @@
   // .hero__logos
 
   &__logos {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
     margin-top: 146px;
 
     @media screen and (max-width: 768px) {
@@ -71,13 +74,20 @@
 
 .logos {
   display: flex;
+  animation: slide 30s linear infinite;
+  display: flex;
   align-items: center;
-  gap: 40px;
-  overflow: hidden;
-  animation: scroll 20s linear infinite;
+  gap: 80px;
+}
 
-  & img:hover & {
-    animation-play-state: paused;
+/* Анимация плавного бесшовного скролла */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }
 
