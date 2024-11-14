@@ -1,542 +1,522 @@
 <!DOCTYPE html>
 <html>
-@@include('html/head.html')
+  @@include('html/head.html')
 
-<body>
-  @@include('html/_header.html')
+  <body>
+    @@include('html/_header.html', {class: ''})
 
-  <main>
-    <section class="hero" id="hero" style="background-image: url(img/hero-image@3x.jpg)">
-      <div class="container">
-        <div class="hero__inner">
-          <div class="hero__title">
-            <p>Реализация проектов</p>
-            <p>Коммерческих интерьеров</p>
-            <p>Любой сложности, более 25 лет</p>
+    <main>
+      <section class="hero" id="hero" style="background-image: url(img/hero-image@3x.jpg)">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__title">
+              <p>Реализация проектов</p>
+              <p>Коммерческих интерьеров</p>
+              <p>Любой сложности, более 25 лет</p>
+            </div>
+            <button type="button" data-popup="lead-form" class="hero__btn _btn">Обсудить проект</button>
           </div>
-          <button type="button" data-popup="lead-form" class="hero__btn _btn">Обсудить проект</button>
         </div>
-      </div>
-      <div class="hero__logos">
-        <div class=" logos" id="logos">
-          <img src="@img/logo/5ka_white.svg" alt="" />
-          <img src="@img/logo/beeline_white.svg" alt="" />
-          <img src="@img/logo/besty_white.svg" alt="" />
-          <img src="@img/logo/burger-king_white.svg" alt="" />
-          <img src="@img/logo/chungun_white.svg" alt="" />
-          <img src="@img/logo/datsun_white.svg" alt="" />
-          <img src="@img/logo/dodo-pizza_white.svg" alt="" />
-          <img src="@img/logo/geox_white.svg" alt="" />
-          <img src="@img/logo/kfc_white.svg" alt="" />
-          <img src="@img/logo/magnit_white.svg" alt="" />
-          <img src="@img/logo/mcdonalds_white.svg" alt="" />
-          <img src="@img/logo/midiynoe-mesto_white.svg" alt="" />
-          <img src="@img/logo/mts_white.svg" alt="" />
-          <img src="@img/logo/nissan_white.svg" alt="" />
-          <img src="@img/logo/pokolenie-dance_white.svg" alt="" />
-          <img src="@img/logo/rostics_white.svg" alt="" />
-          <img src="@img/logo/sberbank_white.svg" alt="" />
-          <img src="@img/logo/shokoladnitsa_white.svg" alt="" />
-          <img src="@img/logo/vkusno-i-tochka_white.svg" alt="" />
-          <img src="@img/logo/yamaha_white.svg" alt="" />
+        <div class="hero__logos">
+          <div class="logos" id="logos">
+            <img src="@img/logo/5ka_white.svg" alt="" />
+            <img src="@img/logo/beeline_white.svg" alt="" />
+            <img src="@img/logo/besty_white.svg" alt="" />
+            <img src="@img/logo/burger-king_white.svg" alt="" />
+            <img src="@img/logo/chungun_white.svg" alt="" />
+            <img src="@img/logo/datsun_white.svg" alt="" />
+            <img src="@img/logo/dodo-pizza_white.svg" alt="" />
+            <img src="@img/logo/geox_white.svg" alt="" />
+            <img src="@img/logo/kfc_white.svg" alt="" />
+            <img src="@img/logo/magnit_white.svg" alt="" />
+            <img src="@img/logo/mcdonalds_white.svg" alt="" />
+            <img src="@img/logo/midiynoe-mesto_white.svg" alt="" />
+            <img src="@img/logo/mts_white.svg" alt="" />
+            <img src="@img/logo/nissan_white.svg" alt="" />
+            <img src="@img/logo/pokolenie-dance_white.svg" alt="" />
+            <img src="@img/logo/rostics_white.svg" alt="" />
+            <img src="@img/logo/sberbank_white.svg" alt="" />
+            <img src="@img/logo/shokoladnitsa_white.svg" alt="" />
+            <img src="@img/logo/vkusno-i-tochka_white.svg" alt="" />
+            <img src="@img/logo/yamaha_white.svg" alt="" />
 
-          <img src="@img/logo/5ka_white.svg" alt="" />
-          <img src="@img/logo/beeline_white.svg" alt="" />
-          <img src="@img/logo/besty_white.svg" alt="" />
-          <img src="@img/logo/burger-king_white.svg" alt="" />
-          <img src="@img/logo/chungun_white.svg" alt="" />
-          <img src="@img/logo/datsun_white.svg" alt="" />
-          <img src="@img/logo/dodo-pizza_white.svg" alt="" />
-          <img src="@img/logo/geox_white.svg" alt="" />
-          <img src="@img/logo/kfc_white.svg" alt="" />
-          <img src="@img/logo/magnit_white.svg" alt="" />
-          <img src="@img/logo/mcdonalds_white.svg" alt="" />
-          <img src="@img/logo/midiynoe-mesto_white.svg" alt="" />
-          <img src="@img/logo/mts_white.svg" alt="" />
-          <img src="@img/logo/nissan_white.svg" alt="" />
-          <img src="@img/logo/pokolenie-dance_white.svg" alt="" />
-          <img src="@img/logo/rostics_white.svg" alt="" />
-          <img src="@img/logo/sberbank_white.svg" alt="" />
-          <img src="@img/logo/shokoladnitsa_white.svg" alt="" />
-          <img src="@img/logo/vkusno-i-tochka_white.svg" alt="" />
-          <img src="@img/logo/yamaha_white.svg" alt="" />
+            <img src="@img/logo/5ka_white.svg" alt="" />
+            <img src="@img/logo/beeline_white.svg" alt="" />
+            <img src="@img/logo/besty_white.svg" alt="" />
+            <img src="@img/logo/burger-king_white.svg" alt="" />
+            <img src="@img/logo/chungun_white.svg" alt="" />
+            <img src="@img/logo/datsun_white.svg" alt="" />
+            <img src="@img/logo/dodo-pizza_white.svg" alt="" />
+            <img src="@img/logo/geox_white.svg" alt="" />
+            <img src="@img/logo/kfc_white.svg" alt="" />
+            <img src="@img/logo/magnit_white.svg" alt="" />
+            <img src="@img/logo/mcdonalds_white.svg" alt="" />
+            <img src="@img/logo/midiynoe-mesto_white.svg" alt="" />
+            <img src="@img/logo/mts_white.svg" alt="" />
+            <img src="@img/logo/nissan_white.svg" alt="" />
+            <img src="@img/logo/pokolenie-dance_white.svg" alt="" />
+            <img src="@img/logo/rostics_white.svg" alt="" />
+            <img src="@img/logo/sberbank_white.svg" alt="" />
+            <img src="@img/logo/shokoladnitsa_white.svg" alt="" />
+            <img src="@img/logo/vkusno-i-tochka_white.svg" alt="" />
+            <img src="@img/logo/yamaha_white.svg" alt="" />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="offer">
-      <div class="container">
-        <div class="offer__image">
-          <img src="@img/offer-1.jpeg" alt="">
+      <section class="offer">
+        <div class="container">
+          <div class="offer__image">
+            <img src="@img/offer-1.jpeg" alt="" />
+          </div>
+          <div class="offer__image">
+            <img src="@img/offer-2.jpeg" alt="" />
+          </div>
+          <div class="offer__image">
+            <img src="@img/offer-3.jpeg" alt="" />
+          </div>
+          <div class="offer__content">
+            <h2 class="offer__title _title _pc">CH&CH предлагает комплексное решение по созданию персональных бизнес-интерьеров — от дизайна и оснащения мебелью до света и флористики</h2>
+            <h2 class="text-image _mb">
+              <p>CH&CH предлагает</p>
+              <p><img src="@img/images/phrase-02.jpg" alt="" />комплексное</p>
+              <p>решение</p>
+              <p>по созданию</p>
+              <p>персональных</p>
+              <p>бизнес-</p>
+              <p>интерьеров —</p>
+              <p>от дизайна <img src="@img/images/phrase-02.jpg" alt="" /></p>
+              <p>и оснащения</p>
+              <p>мебелью до света</p>
+              <p>и флористики</p>
+            </h2>
+            <p class="offer__subtitle">Масштабное производство, технологические возможности и опыт позволят реализовать самый сложный и нестандартный проект под ключ, в срок, в любой точке России и за рубежом</p>
+          </div>
         </div>
-        <div class="offer__image">
-          <img src="@img/offer-2.jpeg" alt="">
-        </div>
-        <div class="offer__image">
-          <img src="@img/offer-3.jpeg" alt="">
-        </div>
-        <div class="offer__content">
-          <h2 class="offer__title _title _pc">
-            CH&CH предлагает комплексное решение по созданию персональных бизнес-интерьеров — от дизайна и оснащения
-            мебелью до света и флористики
-          </h2>
-          <h2 class="text-image _mb">
-            <p>CH&CH предлагает</p>
-            <p><img src="@img/images/phrase-02.jpg" alt="" />комплексное</p>
-            <p>решение</p>
-            <p>по созданию</p>
-            <p>персональных</p>
-            <p>бизнес-</p>
-            <p>интерьеров —</p>
-            <p>от дизайна <img src="@img/images/phrase-02.jpg" alt="" /></p>
-            <p>и оснащения</p>
-            <p>мебелью до света</p>
-            <p>и флористики</p>
-          </h2>
-          <p class="offer__subtitle">
-            Масштабное производство, технологические возможности и опыт позволят реализовать самый сложный
-            и нестандартный проект
-            под ключ, в срок, в любой точке России и за рубежом
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="invite">
-      <div class="container">
-        <div class="invite__inner _padded-section">
-          <h2 class="invite__title _title">Приглашаем вас к сотрудничеству</h2>
-          <p class="invite__subtitle">Дизайнеров и архитектурные бюро</p>
-          <div class="invite__slider swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide card" style="background-image: url(img/images/services-01.jpg)">
-                <div class="card__icon">
-                  <img src="@img/icons/services-01.svg" alt="" />
+      <section class="invite">
+        <div class="container">
+          <div class="invite__inner _padded-section">
+            <h2 class="invite__title _title">Приглашаем вас к сотрудничеству</h2>
+            <p class="invite__subtitle">Дизайнеров и архитектурные бюро</p>
+            <div class="invite__slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide card" style="background-image: url(img/images/services-01.jpg)">
+                  <div class="card__icon">
+                    <img src="@img/icons/services-01.svg" alt="" />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">Пройдем вместе от идеи до реализации</h3>
+                    <p class="card__text">Воплотим ваш дизайн-проект или вместе сформируем концепцию.</p>
+                  </div>
                 </div>
+                <div class="swiper-slide card" style="background-image: url(img/images/services-02.jpg)">
+                  <div class="card__icon">
+                    <img src="@img/icons/services-02.svg" alt="" />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">Проекты любой сложности «под ключ»</h3>
+                    <p class="card__text">Масштабное производство и технологические возможности фабрики способны закрыть самые сложные и нестандартные требования комплексно и в срок.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide card" style="background-image: url(img/images/services-03.jpg)">
+                  <div class="card__icon">
+                    <img src="@img/icons/services-03.svg" alt="" />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">Зарабатываем вместе</h3>
+                    <p class="card__text">Прямой контракт с клиентом или агентский договор, вознаграждение от 10%. Коллаборация в переговорных процессах. Соглашение о неконкуренции.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="invite__action">
+              <h3>Давайте создавать пространства вместе</h3>
+              <button type="button" data-popup="discuss-terms" class="invite__btn _btn">Обсудить условия</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+          <div class="projects__inner _padded-section">
+            <h2 class="projects__title _title">
+              Более 1000 <br />
+              реализованных проектов
+            </h2>
+            <div class="projects__filter filter">
+              <a href="" class="filter__btn">
+                <img src="@img/icons/Office.svg" alt="" />
+                <span>Офисы</span>
+              </a>
+              <a href="" class="filter__btn">
+                <img src="@img/icons/Restaurant.svg" alt="" />
+                <span>Рестораны</span>
+              </a>
+              <a href="" class="filter__btn">
+                <img src="@img/icons/Mall.svg" alt="" />
+                <span>Торговые сети</span>
+              </a>
+              <a href="" class="filter__btn">
+                <img src="@img/icons/Hotel.svg" alt="" />
+                <span>Гостиницы</span>
+              </a>
+              <a href="" class="filter__btn">
+                <img src="@img/icons/Auto.svg" alt="" />
+                <span>Автосалоны</span>
+              </a>
+              <a href="" class="filter__btn">
+                <img src="@img/icons/Other.svg" alt="" />
+                <span>Прочее</span>
+              </a>
+            </div>
+            <div class="projects__grid">
+              <div class="projects__card card" style="background-image: url(img/images/project-dodo.jpg)">
+                <a href="project.html" class="card__link"></a>
                 <div class="card__content">
-                  <h3 class="card__title">Пройдем вместе от идеи до реализации</h3>
-                  <p class="card__text">Воплотим ваш дизайн-проект или вместе сформируем концепцию.</p>
+                  <div class="tags">
+                    <a href="" class="tag">
+                      <img src="@img/logo-dodo.png" alt="" />
+                      <span>Dodo Пицца</span>
+                    </a>
+                    <a href="" class="tag">
+                      <span>2022</span>
+                    </a>
+                  </div>
+                  <div class="card__count">
+                    <p class="card__number">400</p>
+                    <p class="card__text">человек уместили на площади 45м2</p>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide card" style="background-image: url(img/images/services-02.jpg)">
-                <div class="card__icon">
-                  <img src="@img/icons/services-02.svg" alt="" />
-                </div>
+              <div class="projects__card card" style="background-image: url(img/images/project-sber.jpg)">
+                <a href="project.html" class="card__link"></a>
                 <div class="card__content">
-                  <h3 class="card__title">Проекты любой сложности «под ключ»</h3>
-                  <p class="card__text">Масштабное производство и технологические возможности фабрики способны закрыть
-                    самые сложные и нестандартные требования комплексно и в срок.</p>
+                  <div class="tags">
+                    <a href="" class="tag">
+                      <img src="@img/logo-sber.png" alt="" />
+                      <span>Сбер</span>
+                    </a>
+                    <a href="" class="tag">
+                      <span>2023</span>
+                    </a>
+                  </div>
+                  <div class="card__count">
+                    <p class="card__number">9000</p>
+                    <p class="card__text">рабочих мест обустроили сотрудникам компании</p>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide card" style="background-image: url(img/images/services-03.jpg)">
-                <div class="card__icon">
-                  <img src="@img/icons/services-03.svg" alt="" />
-                </div>
+              <div class="projects__card card" style="background-image: url(img/images/project-food.jpeg)">
+                <a href="project.html" class="card__link"></a>
                 <div class="card__content">
-                  <h3 class="card__title">Зарабатываем вместе</h3>
-                  <p class="card__text">Прямой контракт с клиентом или агентский договор, вознаграждение от 10%.
-                    Коллаборация в переговорных процессах. Соглашение о неконкуренции.</p>
+                  <div class="tags">
+                    <a href="" class="tag">
+                      <span>Сеть ресторанов быстрого питания</span>
+                    </a>
+                    <a href="" class="tag">
+                      <span>2022</span>
+                    </a>
+                  </div>
+                  <div class="card__count">
+                    <p class="card__number">450</p>
+                    <p class="card__text">пунктов быстрого обслуживания с полной комплектацией</p>
+                  </div>
+                </div>
+              </div>
+              <div class="projects__card card" style="background-image: url(img/images/project-beeline.jpeg)">
+                <a href="project.html" class="card__link"></a>
+                <div class="card__content">
+                  <div class="tags">
+                    <a href="" class="tag">
+                      <img src="@img/logo-beeline.png" alt="" />
+                      <span>Билайн</span>
+                    </a>
+                    <a href="" class="tag">
+                      <span>2023</span>
+                    </a>
+                  </div>
+                  <div class="card__count">
+                    <p class="card__number">400</p>
+                    <p class="card__text">человек уместили на площади 45м2</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-          <div class="invite__action">
-            <h3>Давайте создавать пространства вместе</h3>
-            <button type="button" data-popup="discuss-terms" class="invite__btn _btn">Обсудить условия</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects">
-      <div class="container">
-        <div class="projects__inner _padded-section">
-          <h2 class="projects__title _title">
-            Более 1000 <br />
-            реализованных проектов
-          </h2>
-          <div class="projects__filter filter">
-            <a href="" class="filter__btn">
-              <img src="@img/icons/Office.svg" alt="" />
-              <span>Офисы</span>
-            </a>
-            <a href="" class="filter__btn">
-              <img src="@img/icons/Restaurant.svg" alt="" />
-              <span>Рестораны</span>
-            </a>
-            <a href="" class="filter__btn">
-              <img src="@img/icons/Mall.svg" alt="" />
-              <span>Торговые сети</span>
-            </a>
-            <a href="" class="filter__btn">
-              <img src="@img/icons/Hotel.svg" alt="" />
-              <span>Гостиницы</span>
-            </a>
-            <a href="" class="filter__btn">
-              <img src="@img/icons/Auto.svg" alt="" />
-              <span>Автосалоны</span>
-            </a>
-            <a href="" class="filter__btn">
-              <img src="@img/icons/Other.svg" alt="" />
-              <span>Прочее</span>
-            </a>
-          </div>
-          <div class="projects__grid">
-            <div class="projects__card card" style="background-image: url(img/images/project-dodo.jpg)">
-              <a href="project.html" class="card__link"></a>
-              <div class="card__content">
-                <div class="tags">
-                  <a href="" class="tag ">
-                    <img src="@img/logo-dodo.png" alt="" />
-                    <span>Dodo Пицца</span>
-                  </a>
-                  <a href="" class="tag">
-                    <span>2022</span>
-                  </a>
-                </div>
-                <div class="card__count">
-                  <p class="card__number">400</p>
-                  <p class="card__text">человек уместили на площади 45м2</p>
-                </div>
-              </div>
-            </div>
-            <div class="projects__card card" style="background-image: url(img/images/project-sber.jpg)">
-              <a href="project.html" class="card__link"></a>
-              <div class="card__content">
-                <div class="tags">
-                  <a href="" class="tag">
-                    <img src="@img/logo-sber.png" alt="" />
-                    <span>Сбер</span>
-                  </a>
-                  <a href="" class="tag">
-                    <span>2023</span>
-                  </a>
-                </div>
-                <div class="card__count">
-                  <p class="card__number">9000</p>
-                  <p class="card__text">рабочих мест обустроили сотрудникам компании</p>
-                </div>
-              </div>
-            </div>
-            <div class="projects__card card" style="background-image: url(img/images/project-food.jpeg)">
-              <a href="project.html" class="card__link"></a>
-              <div class="card__content">
-                <div class="tags">
-                  <a href="" class="tag">
-                    <span>Сеть ресторанов быстрого питания</span>
-                  </a>
-                  <a href="" class="tag">
-                    <span>2022</span>
-                  </a>
-                </div>
-                <div class="card__count">
-                  <p class="card__number">450</p>
-                  <p class="card__text">пунктов быстрого обслуживания с полной комплектацией</p>
-                </div>
-              </div>
-            </div>
-            <div class="projects__card card" style="background-image: url(img/images/project-beeline.jpeg)">
-              <a href="project.html" class="card__link"></a>
-              <div class="card__content">
-                <div class="tags">
-                  <a href="" class="tag">
-                    <img src="@img/logo-beeline.png" alt="" />
-                    <span>Билайн</span>
-                  </a>
-                  <a href="" class="tag">
-                    <span>2023</span>
-                  </a>
-                </div>
-                <div class="card__count">
-                  <p class="card__number">400</p>
-                  <p class="card__text">человек уместили на площади 45м2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="projects__buttons">
-            <a href="/projects.html" class="projects__btn--dark _btn">Смотреть все</a>
-            <a href="https://fabrikant.su/project/" class="projects__btn _btn" target="_blank">Проекты сайта «Фабрикант»
-              <img src="@img/icons/link.svg" alt="" /></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="steps _padded-section" id="steps" style="background-image: url(img/images/steps-bg.jpg)">
-      <div class="container">
-        <div class="steps__inner">
-          <h2 class="steps__title _title">7 шагов от идеи до воплощения</h2>
-          <p class="steps__subtitle">
-            Совместно пройдем от идеи и наброска, <br />
-            до готового к эксплуатации бизнес-пространства
-          </p>
-          <button type="button" data-popup="lead-form" class="steps__btn _btn">Воплотить идею</button>
-          <div class="steps__list">
-            <div class="step">
-              <div class="step__left">
-                <div class="step__number">01</div>
-                <p class="step__title">Слушаем</p>
-              </div>
-              <div class="step__right">
-                <p class="step__parag">Воплотим ваш дизайн-проект или вместе сформируем концепцию.</p>
-                <p class="step__parag">Выявим потребности и агрегируем бизнес-требования.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__left">
-                <div class="step__number">02</div>
-                <p class="step__title">Обследуем объект</p>
-              </div>
-              <div class="step__right">
-                <p class="step__parag">Проводим замеры помещений, исследуем коммуникации и другие особенности объекта.
-                </p>
-                <p class="step__parag">Формируем технический паспорт объекта.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__left">
-                <div class="step__number">03</div>
-                <p class="step__title">Формируем видение проекта</p>
-              </div>
-              <div class="step__right">
-                <p class="step__parag">Фиксируем в техническом задании габариты, размеры, качественные показатели и
-                  важные параметры объекта</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__left">
-                <div class="step__number">04</div>
-                <p class="step__title">Создаем дизайн-проект интерьера</p>
-              </div>
-              <div class="step__right">
-                <p class="step__parag">На основе вашей идеи, пожеланий и брендбука компании создаем индивидуальный
-                  концепт интерьера и прорабатываем его до мелочей.</p>
-                <p class="step__parag">Создаем дизайн в партнерстве с ведущими архитектурными и дизайн-бюро России.</p>
-                <p class="step__parag">Предлагаем оптимальные решения на основе опыта реализации и ввода в эксплуатацию
-                  более 1000 объектов.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__left">
-                <div class="step__number">05</div>
-                <p class="step__title">Комплектуем пространства</p>
-              </div>
-              <div class="step__right">
-                <p class="step__parag">Подбираем и адаптируем мебель или разрабатываем по индивидуальным параметрам.</p>
-                <p class="step__parag">Организуем прямые поставки светильников, декора, перегородок, напольного покрытия
-                  и всего остального.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__left">
-                <div class="step__number">06</div>
-                <p class="step__title">Готовим техническую документацию</p>
-              </div>
-              <div class="step__right">
-                <p class="step__parag">Составляем спецификации и комплекты чертежей для производства.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step__left">
-                <div class="step__number">07</div>
-                <p class="step__title">Реализация и ввод в эксплуатацию</p>
-              </div>
-              <div class="step__right">
-                <p class="step__parag">Доставляем до объекта мебель и все необходимые позиции силами собственной
-                  логистики и транспортной службы.</p>
-                <p class="step__parag">Реализация и внедрение «под ключ» — мы сопровождаем каждый этап монтажных
-                  и отделочных работ — взаимодействуем со службами по электрике и сантехнике, с сотрудниками кассовых
-                  служб и другими необходимыми бригадами.</p>
-              </div>
+            <div class="projects__buttons">
+              <a href="/projects.html" class="projects__btn--dark _btn">Смотреть все</a>
+              <a href="https://fabrikant.su/project/" class="projects__btn _btn" target="_blank">Проекты сайта «Фабрикант» <img src="@img/icons/link.svg" alt="" /></a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="doc _padded-section" id="docs">
-      <div class="container">
-        <h2 class="doc__title _title">Документация</h2>
-        <div class="doc__grid grid-doc">
-          <div class="grid-doc__item">
-            <p class="grid-doc__title">Соглашение о сотрудничестве</p>
-            <ul class="grid-doc__list">
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Договор поставки рамочный.pdf</a>
-                <span>181 КБ</span>
-              </li>
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Соглашение NDA.pdf</a>
-                <span>181 КБ</span>
-              </li>
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Агентский договор.pdf</a>
-                <span>181 КБ</span>
-              </li>
-            </ul>
-          </div>
-          <div class="grid-doc__item">
-            <p class="grid-doc__title">3D библиотека</p>
-            <ul class="grid-doc__list">
-              <li>
-                <img src="@img/icons/Web.svg" alt="" />
-                <a href="">Облако с 3D моделями</a>
-                <span>html</span>
-              </li>
-            </ul>
-          </div>
-          <div class="grid-doc__item">
-            <p class="grid-doc__title">Промо-материалы</p>
-            <ul class="grid-doc__list">
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Презентация компании.pdf</a>
-                <span>181 КБ</span>
-              </li>
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Соглашение NDA.pdf</a>
-                <span>181 КБ</span>
-              </li>
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Агентский договор.pdf</a>
-                <span>181 КБ</span>
-              </li>
-            </ul>
-          </div>
-          <div class="grid-doc__item">
-            <p class="grid-doc__title">Производственная документация</p>
-            <ul class="grid-doc__list">
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Декларация соответствия Евразийского экономического союза.pdf</a>
-                <span>181 КБ</span>
-              </li>
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Заключение Минпромторга о подтверждении производства промышленной продукции на территории
-                  РФ.pdf</a>
-                <span>181 КБ</span>
-              </li>
-              <li>
-                <img src="@img/icons/Pdf.svg" alt="" />
-                <a href="">Сертификат соответсвия “Промтехтандарт”.pdf </a>
-                <span>181 КБ</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact _padded-section" id="contact">
-      <div class="container">
-        <h2 class="contact__title _title">Контакты</h2>
-        <div class="contact__map map _active" id="moskow">
-          <div class="map__head" style="background-image: url(img/moskow-map.jpeg)">
-            <div class="map__tabs">
-              <button type="button" class="_btn--dark" data-id="moskow">Москва</button>
-              <button type="button" class="map__btn _btn" data-id="ryazan">Рязань</button>
-            </div>
-            <a href="" class="map__link _btn">
-              <span>Открыть в Яндекс Картах</span>
-              <img src="@img/icons/link.svg" alt="" />
-            </a>
-          </div>
-          <div class="map__contact">
-            <p class="map__text">
-              Московская область, Раменский район, <br />
-              п. Денежниково, стр. 30, 140164
+      <section class="steps _padded-section" id="steps" style="background-image: url(img/images/steps-bg.jpg)">
+        <div class="container">
+          <div class="steps__inner">
+            <h2 class="steps__title _title">7 шагов от идеи до воплощения</h2>
+            <p class="steps__subtitle">
+              Совместно пройдем от идеи и наброска, <br />
+              до готового к эксплуатации бизнес-пространства
             </p>
-            <div class="map__contact-phone">
-              <a href="tel:+78002504060">8-800-250-40-60 <span>(доб. 1)</span></a>
-              <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
-            </div>
-            <div class="map__contact-phone">
-              <a href="tel:+79209753019">+7-920-975-30-19</a>
-              <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
-            </div>
-            <div class="map__contact-actions">
-              <a href="">sale@chch.pro</a>
-              <a href="">telegram</a>
+            <button type="button" data-popup="lead-form" class="steps__btn _btn">Воплотить идею</button>
+            <div class="steps__list">
+              <div class="step">
+                <div class="step__left">
+                  <div class="step__number">01</div>
+                  <p class="step__title">Слушаем</p>
+                </div>
+                <div class="step__right">
+                  <p class="step__parag">Воплотим ваш дизайн-проект или вместе сформируем концепцию.</p>
+                  <p class="step__parag">Выявим потребности и агрегируем бизнес-требования.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__left">
+                  <div class="step__number">02</div>
+                  <p class="step__title">Обследуем объект</p>
+                </div>
+                <div class="step__right">
+                  <p class="step__parag">Проводим замеры помещений, исследуем коммуникации и другие особенности объекта.</p>
+                  <p class="step__parag">Формируем технический паспорт объекта.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__left">
+                  <div class="step__number">03</div>
+                  <p class="step__title">Формируем видение проекта</p>
+                </div>
+                <div class="step__right">
+                  <p class="step__parag">Фиксируем в техническом задании габариты, размеры, качественные показатели и важные параметры объекта</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__left">
+                  <div class="step__number">04</div>
+                  <p class="step__title">Создаем дизайн-проект интерьера</p>
+                </div>
+                <div class="step__right">
+                  <p class="step__parag">На основе вашей идеи, пожеланий и брендбука компании создаем индивидуальный концепт интерьера и прорабатываем его до мелочей.</p>
+                  <p class="step__parag">Создаем дизайн в партнерстве с ведущими архитектурными и дизайн-бюро России.</p>
+                  <p class="step__parag">Предлагаем оптимальные решения на основе опыта реализации и ввода в эксплуатацию более 1000 объектов.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__left">
+                  <div class="step__number">05</div>
+                  <p class="step__title">Комплектуем пространства</p>
+                </div>
+                <div class="step__right">
+                  <p class="step__parag">Подбираем и адаптируем мебель или разрабатываем по индивидуальным параметрам.</p>
+                  <p class="step__parag">Организуем прямые поставки светильников, декора, перегородок, напольного покрытия и всего остального.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__left">
+                  <div class="step__number">06</div>
+                  <p class="step__title">Готовим техническую документацию</p>
+                </div>
+                <div class="step__right">
+                  <p class="step__parag">Составляем спецификации и комплекты чертежей для производства.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__left">
+                  <div class="step__number">07</div>
+                  <p class="step__title">Реализация и ввод в эксплуатацию</p>
+                </div>
+                <div class="step__right">
+                  <p class="step__parag">Доставляем до объекта мебель и все необходимые позиции силами собственной логистики и транспортной службы.</p>
+                  <p class="step__parag">Реализация и внедрение «под ключ» — мы сопровождаем каждый этап монтажных и отделочных работ — взаимодействуем со службами по электрике и сантехнике, с сотрудниками кассовых служб и другими необходимыми бригадами.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="contact__map map" id="ryazan">
-          <div class="map__head" style="background-image: url(img/ryazan-map.jpeg)">
-            <div class="map__tabs" id="map-tab">
-              <button type="button" class="_btn--dark" data-id="moskow">Москва</button>
-              <button type="button" class="map__btn _btn" data-id="ryazan">Рязань</button>
+      </section>
+
+      <section class="doc _padded-section" id="docs">
+        <div class="container">
+          <h2 class="doc__title _title">Документация</h2>
+          <div class="doc__grid grid-doc">
+            <div class="grid-doc__item">
+              <p class="grid-doc__title">Соглашение о сотрудничестве</p>
+              <ul class="grid-doc__list">
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Договор поставки рамочный.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Соглашение NDA.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Агентский договор.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+              </ul>
             </div>
-            <a href="" class="map__link _btn">
-              <span>Открыть в Яндекс Картах</span>
-              <img src="@img/icons/link.svg" alt="" />
-            </a>
-          </div>
-          <div class="map__contact">
-            <p class="map__text">
-              Рязанская область, Рязанский район,<br> с. Поляны, ул. Терехина, д. 14, 390525
-            </p>
-            <div class="map__contact-phone">
-              <a href="tel:+78002504060">8-800-250-40-60<span>(доб. 1)</span></a>
-              <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
+            <div class="grid-doc__item">
+              <p class="grid-doc__title">3D библиотека</p>
+              <ul class="grid-doc__list">
+                <li>
+                  <img src="@img/icons/Web.svg" alt="" />
+                  <a href="">Облако с 3D моделями</a>
+                  <span>html</span>
+                </li>
+              </ul>
             </div>
-            <div class="map__contact-phone">
-              <a href="tel:+79209753019">+7-920-975-30-19</a>
-              <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
+            <div class="grid-doc__item">
+              <p class="grid-doc__title">Промо-материалы</p>
+              <ul class="grid-doc__list">
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Презентация компании.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Соглашение NDA.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Агентский договор.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+              </ul>
             </div>
-            <div class="map__contact-actions">
-              <a href="">sale@chch.pro</a>
-              <a href="">telegram</a>
+            <div class="grid-doc__item">
+              <p class="grid-doc__title">Производственная документация</p>
+              <ul class="grid-doc__list">
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Декларация соответствия Евразийского экономического союза.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Заключение Минпромторга о подтверждении производства промышленной продукции на территории РФ.pdf</a>
+                  <span>181 КБ</span>
+                </li>
+                <li>
+                  <img src="@img/icons/Pdf.svg" alt="" />
+                  <a href="">Сертификат соответсвия “Промтехтандарт”.pdf </a>
+                  <span>181 КБ</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    @@include('html/component/implement.html')
+      <section class="contact _padded-section" id="contact">
+        <div class="container">
+          <h2 class="contact__title _title">Контакты</h2>
+          <div class="contact__map map _active" id="moskow">
+            <div class="map__head" style="background-image: url(img/moskow-map.jpeg)">
+              <div class="map__tabs">
+                <button type="button" class="_btn--dark" data-id="moskow">Москва</button>
+                <button type="button" class="map__btn _btn" data-id="ryazan">Рязань</button>
+              </div>
+              <a href="" class="map__link _btn">
+                <span>Открыть в Яндекс Картах</span>
+                <img src="@img/icons/link.svg" alt="" />
+              </a>
+            </div>
+            <div class="map__contact">
+              <p class="map__text">
+                Московская область, Раменский район, <br />
+                п. Денежниково, стр. 30, 140164
+              </p>
+              <div class="map__contact-phone">
+                <a href="tel:+78002504060">8-800-250-40-60 <span>(доб. 1)</span></a>
+                <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
+              </div>
+              <div class="map__contact-phone">
+                <a href="tel:+79209753019">+7-920-975-30-19</a>
+                <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
+              </div>
+              <div class="map__contact-actions">
+                <a href="">sale@chch.pro</a>
+                <a href="">telegram</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact__map map" id="ryazan">
+            <div class="map__head" style="background-image: url(img/ryazan-map.jpeg)">
+              <div class="map__tabs" id="map-tab">
+                <button type="button" class="_btn--dark" data-id="moskow">Москва</button>
+                <button type="button" class="map__btn _btn" data-id="ryazan">Рязань</button>
+              </div>
+              <a href="" class="map__link _btn">
+                <span>Открыть в Яндекс Картах</span>
+                <img src="@img/icons/link.svg" alt="" />
+              </a>
+            </div>
+            <div class="map__contact">
+              <p class="map__text">
+                Рязанская область, Рязанский район,<br />
+                с. Поляны, ул. Терехина, д. 14, 390525
+              </p>
+              <div class="map__contact-phone">
+                <a href="tel:+78002504060">8-800-250-40-60<span>(доб. 1)</span></a>
+                <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
+              </div>
+              <div class="map__contact-phone">
+                <a href="tel:+79209753019">+7-920-975-30-19</a>
+                <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
+              </div>
+              <div class="map__contact-actions">
+                <a href="">sale@chch.pro</a>
+                <a href="">telegram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  </main>
+      @@include('html/component/implement.html')
+    </main>
 
-  @@include('html/_footer.html') @@include('html/_popup.html')
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    // init Swiper:
-    const swiper = new Swiper(".invite__slider", {
-      slidesPerView: 3,
-      loop: false,
-      spaceBetween: 24,
-      autoHeight: false,
-      pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: false,
-      },
-      breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20,
+    @@include('html/_footer.html') @@include('html/_popup.html')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // init Swiper:
+      const swiper = new Swiper(".invite__slider", {
+        slidesPerView: 3,
+        loop: false,
+        spaceBetween: 24,
+        autoHeight: false,
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: false,
         },
-        // when window width is >= 480px
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
         },
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      },
-    });
-  </script>
-  <script src="js/app.min.js"></script>
-</body>
-
+      });
+    </script>
+    <script src="js/app.min.js"></script>
+  </body>
 </html>
