@@ -16,7 +16,7 @@
       color: rgba($color: #141414, $alpha: 1.0);
     }
 
-    .header__social{
+    .header__social {
       a {
         &.tg {
           background-image: url('/img/icons/Telegram-black.svg');
@@ -85,6 +85,18 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    position: relative;
+    overflow: hidden;
+
+    a {
+      @media (hover:hover) {
+        &:hover {
+          .text-swap {
+            transform: translateY(-100%);
+          }
+        }
+      }
+    }
   }
 
   // .header__phone
@@ -104,6 +116,15 @@
   // .header__burger
 
   &__burger {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    background-image: url('@img/icons/Menu.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+
+
     @media screen and (min-width: 992px) {
       display: none;
     }
@@ -139,6 +160,19 @@
       &.wa {
         background-image: url('/img/icons/Whatsapp.svg');
       }
+
+      &.tg,
+      &.vk,
+      &.zen,
+      &.wa {
+        transition: .3s;
+
+        @media (hover:hover) {
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
     }
 
 
@@ -158,7 +192,18 @@
 
   // .nav__item
 
-  &__item {}
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    @media (hover:hover) {
+      &:hover {
+        .text-swap {
+          transform: translateY(-100%);
+        }
+      }
+    }
+  }
 
   // .nav__link
 
@@ -167,12 +212,5 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 145%;
-    transition: $animation_speed;
-
-    @media (hover:hover) {
-      &:hover {
-        color: rgba($color: #ffffff, $alpha: 0.8);
-      }
-    }
   }
 }

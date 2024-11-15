@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
-  @@include('html/head.html'{
-  "title":"Ch&Ch"
-  })
+  @@include('html/head.html'{ "title":"Ch&Ch" })
 
   <body>
-    @@include('html/_header.html',{
-      "isWhite": true
-    })
+    @@include('html/_header.html',{ "isWhite": true })
 
-    <main>
+    <main class="main-top-margin">
       <section class="project _padded-section">
         <div class="project__tags">
           <a href="" class="tag tag--dark">
@@ -199,7 +195,7 @@
         </div>
       </section>
 
-      @@include('html/component/implement.html')
+      @@include('html/blocks/implement.html')
     </main>
 
     @@include('html/_footer.html') @@include('html/_popup.html')

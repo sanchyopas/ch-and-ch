@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+@@include('html/head.html'{ "title":"Ch&Ch" })
+
+<body>
+  @@include('html/_header.html',{ "isWhite": true })
+
+  <main class="main-top-margin ">
+    <section class="error-page _padded-section">
+      <div class="container">
+        <div class="error-page__inner">
+          <svg width="" height="" viewBox="0 0 550 360" class="error-page__title">
+            <text x="50%" y="50%" text-anchor="middle" dy=".35em" font-size="160" font-weight="bold" fill="black"
+              stroke="black" stroke-width="2" stroke-dasharray="5,5">
+              404
+            </text>
+          </svg>
+          <p class="error-page__text">Страница не найдена, была переименована или удалена</p>
+          <a href="" class="error-page__btn _btn--dark">На главную</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @@include('html/_footer.html')
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

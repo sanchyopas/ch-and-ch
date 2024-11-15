@@ -4,11 +4,21 @@
       <a href="/" class="header__logo"> </a>
       <nav class="header__nav nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link" data-anchor="hero">Ch&Ch</a></li>
-          <li class="nav__item"><a href="/projects.html" class="nav__link">Проекты</a></li>
-          <li class="nav__item"><a href="#" class="nav__link" data-anchor="steps">Этапы работы</a></li>
-          <li class="nav__item"><a href="#" class="nav__link" data-anchor="docs">Документы</a></li>
-          <li class="nav__item"><a href="#" class="nav__link" data-anchor="contact">Контакты</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link text-swap" data-anchor="hero" data-text="Ch&Ch">Ch&Ch</a>
+          </li>
+          <li class="nav__item">
+            <a href="/projects.html" class="nav__link text-swap" data-text="Проекты">Проекты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link text-swap" data-anchor="steps" data-text="Этапы работы">Этапы работы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link text-swap" data-anchor="docs" data-text="Документы">Документы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link text-swap" data-anchor="contact" data-text="Контакты">Контакты</a>
+          </li>
         </ul>
       </nav>
       <div class="header__actions">
@@ -19,13 +29,15 @@
           <a href="" class="wa"></a>
         </div>
         <div class="header__actions-wrap">
-          <a href="tel:+78002504060" class="header__phone">8-800-250-40-60</a>
-          <a href="" class="header__lang">En</a>
+          <a href="tel:+78002504060" class="header__phone">
+            <span class="text-swap" data-text="8-800-250-40-60">8-800-250-40-60</span>
+          </a>
+          <a href="" class="header__lang text-swap">
+            <span class="text-swap" data-text="En">En</span>
+          </a>
         </div>
       </div>
-      <button type="button" class="header__burger" id="burger">
-        <img src="@img/icons/Menu.svg" alt="Burger " />
-      </button>
+      <button type="button" class="header__burger" id="burger"></button>
     </div>
   </div>
 </header>
