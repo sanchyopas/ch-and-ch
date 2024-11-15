@@ -20,7 +20,11 @@
 
   // .implement__btn
 
-  &__btn {}
+  &__btn {
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    background: rgb(101, 104, 76);
+  }
 }
 
 .text-image {

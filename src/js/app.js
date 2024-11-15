@@ -136,17 +136,61 @@ import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#offer",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (!isTouchDevice) {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#offer",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
+  gsap.utils.toArray(".offer__image").forEach(layer => {
+    const depth = layer.dataset.depth;
+    const movement = -(layer.offsetHeight * depth)
+    tl.to(layer, { y: movement, ease: "power2.inOut" }, 0)
+  });
+
+  const depth = 0.3; // Глубина эффекта (от 0 до 1, большее значение — сильнее эффект)
+  const image = document.querySelector(".steps__bg"); // Выбираем конкретный элемент
+  const movement = -(image.offsetHeight * depth); // Вычисляем движение
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: "#steps",
+      start: "top bottom", // Начало анимации
+      end: "bottom top", // Конец анимации
+      scrub: true, // Связь с прокруткой
+    },
+  }).to(image, { y: movement, ease: "none" }); // Параллакс-эффект
+}
+
+gsap.utils.toArray(".text-line").forEach((line, index) => {
+  gsap.fromTo(line,
+    {
+      opacity: 0,
+      transform: "translateY(100%)" // Начальная позиция и скрытие
+    },
+    {
+      opacity: 1,
+      transform: "translateY(0%)", // Конечная позиция, где текст будет видимым
+      duration: 1,
+      delay: index * 0.3, // Задержка между строками
+      ease: "power4.out"
+    });
 });
 
-gsap.utils.toArray(".offer__image").forEach(layer => {
-  const depth = layer.dataset.depth;
-  const movement = -(layer.offsetHeight * depth)
-  tl.to(layer, { y: movement, ease: "none" }, 0)
+gsap.utils.toArray(".fade").forEach((line, index) => {
+  gsap.fromTo(line,
+    {
+      opacity: 0, /* Начальная невидимость */
+    },
+    {
+      opacity: 1, /* Конечное состояние - полностью видимый */
+      duration: 1, /* Длительность анимации */
+      ease: "power4.out" /* Плавная анимация */
+    });
 });

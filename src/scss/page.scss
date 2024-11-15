@@ -31,7 +31,10 @@
   // .hero__title
 
   &__title {
+    overflow: hidden;
+
     p {
+      overflow: hidden;
       color: rgba($color: #ffffff, $alpha: 1.0);
       font-size: 60px;
       font-weight: 400;
@@ -56,10 +59,19 @@
   // .hero__btn
 
   &__btn {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
     margin-top: 60px;
 
     @media screen and (max-width: 768px) {
       margin-top: 40px;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        color: rgba($color: #141414, $alpha: 1.0);
+      }
     }
   }
 
@@ -251,7 +263,17 @@
 
   // .invite__btn
 
-  &__btn {}
+  &__btn {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        color: rgba($color: #141414, $alpha: 1.0);
+      }
+    }
+  }
 
 
   .swiper-wrapper {
@@ -638,24 +660,40 @@
 
 .steps {
   position: relative;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+
 
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: rgba($color: #000000, $alpha: .8);
+    z-index: 1;
+  }
+
+  // .steps_bg
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
   }
 
   // .steps__inner
 
   &__inner {
     position: relative;
+    z-index: 2;
   }
 
   // .steps__title
@@ -685,10 +723,19 @@
   // .steps__btn
 
   &__btn {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
     margin-top: 60px;
 
     @media screen and (max-width: 768px) {
       margin-top: 40px;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        color: rgba($color: #141414, $alpha: 1.0);
+      }
     }
   }
 
@@ -833,6 +880,7 @@
       display: grid;
       grid-template-columns: 30px 447px;
       grid-template-rows: 1fr auto;
+      justify-items: start;
       column-gap: 21px;
       row-gap: 4px;
 
@@ -846,13 +894,29 @@
       }
 
       a {
-        // position: relative;
+        position: relative;
         color: rgba(20, 20, 20, 0.8);
         font-size: 16px;
         font-weight: 400;
         line-height: 150%;
-        text-decoration: underline;
-        text-underline-offset: 5px;
+
+
+        @media (hover:hover) {
+          &:hover::before {
+            background-color: rgba(101, 104, 76, 1);
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background-color: rgba(101, 104, 76, 0.5);
+          transition: .3s;
+        }
       }
 
       span {
@@ -869,161 +933,31 @@
   }
 }
 
-.contact {
-
-  // .contact__title
-
-  &__title {
-    margin-bottom: 60px;
-  }
-
-  // .contact__map
-
-  &__map {}
+.text-mask-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  /* Скрываем текст, который выходит за пределы */
 }
 
-.map {
+.text-mask {
+  display: block;
+  width: 100%;
   position: relative;
-  display: none;
+}
 
-  &._active {
-    display: block;
-  }
+.text-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
+  /* Начальная позиция текста */
+  will-change: transform, opacity;
+}
 
-  // .map__head
-
-  &__head {
-    width: 100%;
-    min-height: 520px;
-    padding: 24px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    @media screen and (max-width: 992px) {
-      flex-direction: column;
-    }
-  }
-
-  // .map__tabs
-
-  &__tabs {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  // .map__btn
-
-  &__btn {
-    color: #65684C;
-    border-radius: 40px;
-    backdrop-filter: blur(24px);
-    background: rgba(101, 104, 76, 0.1);
-  }
-
-  // .map__link
-
-  &__link {
-    color: rgb(101, 104, 76);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
-    text-align: left;
-    border-radius: 40px;
-    backdrop-filter: blur(24px);
-    background: rgba(101, 104, 76, 0.1);
-
-    span {
-      @media screen and (max-width: 992px) {
-        display: none;
-      }
-    }
-  }
-
-  // .map__contact
-
-  &__contact {
-    padding: 24px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    border-radius: 8px;
-    background: rgb(255, 255, 255);
-
-    @media screen and (min-width: 992px) {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      max-width: 375px;
-      padding: 24px 24px;
-    }
-  }
-
-  // .map__text
-
-  &__text {
-    color: rgba(20, 20, 20, 0.8);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
-  }
-
-  // .map__contact-phone
-
-  &__contact-phone {
-    a {
-      color: rgb(20, 20, 20);
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 112%;
-
-      span {
-        font-size: 16px;
-      }
-
-      @media screen and (max-width: 768px) {
-        font-size: 24px;
-      }
-    }
-
-
-  }
-
-  // .map__text--opacity
-
-  &__text--opacity {
-    color: rgba(20, 20, 20, 0.4);
-  }
-
-  // .map__contact-actions
-
-  &__contact-actions {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-
-    a {
-      position: relative;
-      color: rgba(20, 20, 20, 0.8);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 150%;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        height: 1px;
-        background: rgba(101, 104, 76, 0.5);
-      }
-    }
-  }
+.text-mask-container {
+  position: relative;
+  display: inline-block;
+  height: auto;
 }
 
 // Project - Страница проекта

@@ -14,6 +14,16 @@
 ** Анимация Text Swap Animation
 */
 
+.text-swap-trigger {
+  @media (hover:hover) {
+    &:hover {
+      .text-swap {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
 .text-swap-wrap {
   overflow: hidden;
   position: relative;

@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
-@@include('html/head.html', {
-"title":"Ch&Ch"
-})
+@@include('html/head.html', { "title":"Ch&Ch" })
 
 <body>
-  @@include('html/_header.html',{
-  "isWhite": false
-  })
+  @@include('html/_header.html',{ "isWhite": false })
 
   <main>
     <section class="hero" id="hero" style="background-image: url(img/hero-image@3x.jpg)">
       <div class="container">
         <div class="hero__inner">
           <div class="hero__title">
-            <p>Реализация проектов</p>
-            <p>Коммерческих интерьеров</p>
-            <p>Любой сложности, более 25 лет</p>
+            <p><span class="text-line">Реализация проектов</span></p>
+            <p><span class="text-line">Коммерческих интерьеров</span></p>
+            <p><span class="text-line">Любой сложности, более 25 лет</span></p>
           </div>
-          @@include('html/components/btn.html',{ "name": "Обсудить проект", "class": "hero__btn" })
+          @@include('html/components/btn.html',{ "name": "Обсудить проект", "class": "hero__btn fade" })
         </div>
       </div>
-      <div class="hero__logos">
+      <div class="hero__logos fade">
         <div class="logos" id="logos">
           <img src="@img/logo/5ka_white.svg" alt="" />
           <img src="@img/logo/beeline_white.svg" alt="" />
@@ -71,13 +67,13 @@
     <section id="offer">
       <div class="offer">
         <div class="container">
-          <div class="offer__image" data-depth='2.20'>
+          <div class="offer__image" data-depth="2.20">
             <img src="@img/offer-1.jpeg" alt="" />
           </div>
-          <div class="offer__image" data-depth='1.00'>
+          <div class="offer__image" data-depth="1.00">
             <img src="@img/offer-2.jpeg" alt="" />
           </div>
-          <div class="offer__image" data-depth='1.00'>
+          <div class="offer__image" data-depth="1.00">
             <img src="@img/offer-3.jpeg" alt="" />
           </div>
           <div class="offer__content">
@@ -269,8 +265,8 @@
             </a>
           </div>
 
-          <a href="https://fabrikant.su/project/" class="_btn projects__btn " target="_blank">
-            <img src="@img/icons/Fabrikant.svg" alt="">
+          <a href="https://fabrikant.su/project/" class="_btn projects__btn" target="_blank">
+            <img src="@img/icons/Fabrikant.svg" alt="" />
             Проекты сайта «Фабрикант»
             <img src="@img/icons/link.svg" alt="" />
           </a>
@@ -278,7 +274,8 @@
       </div>
     </section>
 
-    <section class="steps _padded-section" id="steps" style="background-image: url(img/images/steps-bg.jpg)">
+    <section class="steps _padded-section" id="steps">
+      <div class="steps__bg" style="background-image: url(img/images/steps-bg.jpg)"></div>
       <div class="container">
         <div class="steps__inner">
           <h2 class="steps__title _title">7 шагов от идеи до воплощения</h2>
@@ -449,73 +446,7 @@
       </div>
     </section>
 
-    <section class="contact _padded-section" id="contact">
-      <div class="container">
-        <h2 class="contact__title _title">Контакты</h2>
-        <div class="contact__map map _active" id="moskow">
-          <div class="map__head" style="background-image: url(img/moskow-map.jpeg)">
-            <div class="map__tabs">
-              <button type="button" class="_btn--dark" data-id="moskow">Москва</button>
-              <button type="button" class="map__btn _btn" data-id="ryazan">Рязань</button>
-            </div>
-            <a href="" class="map__link _btn">
-              <span>Открыть в Яндекс Картах</span>
-              <img src="@img/icons/link.svg" alt="" />
-            </a>
-          </div>
-          <div class="map__contact">
-            <p class="map__text">
-              Московская область, Раменский район, <br />
-              п. Денежниково, стр. 30, 140164
-            </p>
-            <div class="map__contact-phone">
-              <a href="tel:+78002504060">8-800-250-40-60 <span>(доб. 1)</span></a>
-              <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
-            </div>
-            <div class="map__contact-phone">
-              <a href="tel:+79209753019">+7-920-975-30-19</a>
-              <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
-            </div>
-            <div class="map__contact-actions">
-              <a href="">sale@chch.pro</a>
-              <a href="">telegram</a>
-            </div>
-          </div>
-        </div>
-        <div class="contact__map map" id="ryazan">
-          <div class="map__head" style="background-image: url(img/ryazan-map.jpeg)">
-            <div class="map__tabs" id="map-tab">
-              <button type="button" class="_btn--dark" data-id="moskow">Москва</button>
-              <button type="button" class="map__btn _btn" data-id="ryazan">Рязань</button>
-            </div>
-            <a href="" class="map__link _btn">
-              <span>Открыть в Яндекс Картах</span>
-              <img src="@img/icons/link.svg" alt="" />
-            </a>
-          </div>
-          <div class="map__contact">
-            <p class="map__text">
-              Рязанская область, Рязанский район,<br />
-              с. Поляны, ул. Терехина, д. 14, 390525
-            </p>
-            <div class="map__contact-phone">
-              <a href="tel:+78002504060">8-800-250-40-60<span>(доб. 1)</span></a>
-              <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
-            </div>
-            <div class="map__contact-phone">
-              <a href="tel:+79209753019">+7-920-975-30-19</a>
-              <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
-            </div>
-            <div class="map__contact-actions">
-              <a href="">sale@chch.pro</a>
-              <a href="">telegram</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    @@include('html/blocks/implement.html')
+    @@include('html/blocks/contact.html') @@include('html/blocks/implement.html')
   </main>
 
   @@include('html/_footer.html') @@include('html/_popup.html')
