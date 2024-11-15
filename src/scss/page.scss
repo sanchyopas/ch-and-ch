@@ -941,31 +941,31 @@
   }
 }
 
-.text-mask-container {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  /* Скрываем текст, который выходит за пределы */
-}
+// .text-mask-container {
+//   width: 100%;
+//   height: auto;
+//   overflow: hidden;
+//   /* Скрываем текст, который выходит за пределы */
+// }
 
-.text-mask {
-  display: block;
-  width: 100%;
-  position: relative;
-}
+// .text-mask {
+//   display: block;
+//   width: 100%;
+//   position: relative;
+// }
 
-.text-line {
-  display: block;
-  transform: translateY(100%);
-  /* Начальная позиция текста */
-  will-change: transform, opacity;
-}
+// .text-line {
+//   display: block;
+//   transform: translateY(100%);
+//   /* Начальная позиция текста */
+//   will-change: transform, opacity;
+// }
 
-.text-mask-container {
-  position: relative;
-  display: inline-block;
-  height: auto;
-}
+// .text-mask-container {
+//   position: relative;
+//   display: inline-block;
+//   height: auto;
+// }
 
 // Project - Страница проекта
 

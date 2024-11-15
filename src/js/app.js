@@ -19,16 +19,7 @@ const bodyUnLock = (e) => {
 const header = document.querySelector('.header');
 let positionTopHeader = header.getBoundingClientRect().top;
 
-window.addEventListener('scroll', () => {
-  let scrollY = window.scrollY || window.pageYOffset;
-  // header--sticky
 
-  if (scrollY >= positionTopHeader) {
-    header.classList.add('header--sticky');
-  } else {
-    header.classList.remove('header--sticky');
-  }
-})
 
 // Функция для скролла к элементу
 function scrollToElement(elementId) {
@@ -37,6 +28,9 @@ function scrollToElement(elementId) {
   if (element) {
     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
     // const offsetPosition = elementPosition - headerHeight;
+
+    document.querySelector('.header').classList.remove('_active');
+    bodyUnLock();
 
     window.scrollTo({
       top: elementPosition,
@@ -211,5 +205,17 @@ if (!isTouchDevice) {
       });
   });
 }
+
+
+// Бургер меню
+
+document.getElementById('burger').addEventListener('click', (e) => {
+  document.querySelector('.header').classList.toggle('_active');
+  bodyLock();
+
+  if (!document.querySelector('.header').classList.contains('_active')) {
+    bodyUnLock();
+  }
+})
 
 
