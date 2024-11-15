@@ -17,7 +17,7 @@
 
   &--white {
     .header__logo {
-      background-image: url('/img/logo-ch-ch-black.svg');
+      background-image: url('@img/logo-ch-ch-black.svg');
     }
 
     .nav__link,
@@ -29,21 +29,25 @@
     .header__social {
       a {
         &.tg {
-          background-image: url('/img/icons/Telegram-black.svg');
+          background-image: url('@img/icons/Telegram-black.svg');
         }
 
         &.vk {
-          background-image: url('/img/icons/Vk-black.svg');
+          background-image: url('@img/icons/Vk-black.svg');
         }
 
         &.zen {
-          background-image: url('/img/icons/Zen-black.svg');
+          background-image: url('@img/icons/Zen-black.svg');
         }
 
         &.wa {
-          background-image: url('/img/icons/Whatsapp-black.svg');
+          background-image: url('@img/icons/Whatsapp-black.svg');
         }
       }
+    }
+
+    .header__burger {
+      background-image: url('@img/icons/Menu-black.svg');
     }
   }
 
@@ -62,7 +66,7 @@
   &__logo {
     width: 86px;
     height: 40px;
-    background-image: url('/img/logo-ch-ch.svg');
+    background-image: url('@img/logo-ch-ch.svg');
     position: relative;
     z-index: 10;
 
@@ -177,19 +181,19 @@
       background-position: center center;
 
       &.tg {
-        background-image: url('/img/icons/Telegram.svg');
+        background-image: url('@img/icons/Telegram.svg');
       }
 
       &.vk {
-        background-image: url('/img/icons/Vk.svg');
+        background-image: url('@img/icons/Vk.svg');
       }
 
       &.zen {
-        background-image: url('/img/icons/Zen.svg');
+        background-image: url('@img/icons/Zen.svg');
       }
 
       &.wa {
-        background-image: url('/img/icons/Whatsapp.svg');
+        background-image: url('@img/icons/Whatsapp.svg');
       }
 
       &.tg,
