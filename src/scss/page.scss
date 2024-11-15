@@ -285,8 +285,31 @@
   align-items: flex-end;
   position: relative;
   border-radius: 24px;
-  background-size: cover;
+
   overflow: hidden;
+
+  @media (hover:hover) {
+    &:hover {
+      .card__bg {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // .card__bg
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    transition: transform .3s ease;
+  }
 
   &::before {
     content: '';
@@ -296,6 +319,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(180.00deg, rgba(20, 20, 20, 0.1), rgb(20, 20, 20) 100%);
+    z-index: 1;
   }
 
   @media screen and (min-width: 768px) {
@@ -312,6 +336,7 @@
     width: 100%;
     height: 100%;
     z-index: 9;
+    transition: all 0.3s ease-in-out;
   }
 
   // .invite-card__icon
@@ -336,6 +361,7 @@
     display: grid;
     gap: 24px;
     position: relative;
+    z-index: 2;
   }
 
   // .invite-card__title
@@ -405,20 +431,16 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 6px 12px;
   border-radius: 40px;
   backdrop-filter: blur(24px);
   background: rgba(255, 255, 255, 0.3);
 
-  img {
-    display: block;
-    width: 20px;
-    height: 20px;
-  }
-
   span {
-    display: block;
-    white-space: no-wrap;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 145%;
   }
 
   // .tag--dark
@@ -430,14 +452,25 @@
     background-color: rgba($color: #65684C, $alpha: .1);
   }
 
-  // .tag--brand-logo
+  // .tag-dark--brand-logo
 
-  &--brand-logo {
+  &-dark--brand-logo {
     padding: 4px 24px 4px 4px;
 
     img {
       width: 40px;
       height: 40px;
+    }
+  }
+
+  // .tag-light--brand-logo
+
+  &-light--brand-logo {
+    padding: 4px 12px 4px 4px;
+
+    img {
+      width: 24px;
+      height: 24px;
     }
   }
 }
@@ -522,17 +555,23 @@
     }
   }
 
-  // .projects__btn--dark
-
-  &__btn--dark {
-    background: rgb(101, 104, 76);
-  }
-
   // .projects__btn
 
   &__btn {
+    gap: 8px;
     background: rgba(101, 104, 76, 0.1);
     color: rgb(101, 104, 76);
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 1.0);
+        color: rgba($color: #141414, $alpha: 1.0);
+
+        .text-swap {
+          transform: translateY(-100%);
+        }
+      }
+    }
   }
 }
 
@@ -579,6 +618,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    padding: 8px 16px;
     border-radius: 40px;
     background: rgba(101, 104, 76, 0.1);
     color: rgb(101, 104, 76);
@@ -592,6 +632,7 @@
         background: rgba(101, 104, 76, 0.15);
       }
     }
+
   }
 }
 

@@ -21,6 +21,7 @@
   "homepage": "",
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "gsap": "^3.12.5",
     "gulp-cli": "^2.3.0",
     "normalize.css": "^8.0.1",
     "swiper": "^11.1.14"

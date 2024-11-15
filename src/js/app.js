@@ -129,3 +129,24 @@ const mapTabBtn = document.querySelectorAll('[data-id]');
 if (mapTabBtn) {
   mapTabBtn.forEach(btn => btn.addEventListener('click', showMap))
 }
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#offer",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+gsap.utils.toArray(".offer__image").forEach(layer => {
+  const depth = layer.dataset.depth;
+  const movement = -(layer.offsetHeight * depth)
+  tl.to(layer, { y: movement, ease: "none" }, 0)
+});
