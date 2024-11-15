@@ -15,6 +15,26 @@
     .header__lang {
       color: rgba($color: #141414, $alpha: 1.0);
     }
+
+    .header__social{
+      a {
+        &.tg {
+          background-image: url('/img/icons/Telegram-black.svg');
+        }
+
+        &.vk {
+          background-image: url('/img/icons/Vk-black.svg');
+        }
+
+        &.zen {
+          background-image: url('/img/icons/Zen-black.svg');
+        }
+
+        &.wa {
+          background-image: url('/img/icons/Whatsapp-black.svg');
+        }
+      }
+    }
   }
 
   // .header__inner
@@ -104,20 +124,20 @@
       background-size: cover;
       background-position: center center;
 
-      &:nth-child(1) {
-        background-image: url('/img/icons/Telegram-black.svg');
+      &.tg {
+        background-image: url('/img/icons/Telegram.svg');
       }
 
-      &:nth-child(2) {
-        background-image: url('/img/icons/Vk-black.svg');
+      &.vk {
+        background-image: url('/img/icons/Vk.svg');
       }
 
-      &:nth-child(3) {
-        background-image: url('/img/icons/Zen-black.svg');
+      &.zen {
+        background-image: url('/img/icons/Zen.svg');
       }
 
-      &:nth-child(4) {
-        background-image: url('/img/icons/Whatsapp-black.svg');
+      &.wa {
+        background-image: url('/img/icons/Whatsapp.svg');
       }
     }
 

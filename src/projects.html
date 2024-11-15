@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-  @@include('html/head.html')
+  @@include('html/head.html'{
+  "title":"Ch&Ch"
+  })
 
   <body>
-    @@include('html/_header.html')
+  @@include('html/_header.html',{
+    "isWhite": true
+  })
 
     <main>
       <section class="projects">

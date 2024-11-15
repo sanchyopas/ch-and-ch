@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-  @@include('html/head.html')
+  @@include('html/head.html', {
+    "title":"Ch&Ch"
+  })
 
   <body>
-    @@include('html/_header.html', {class: ''})
+  @@include('html/_header.html',{
+    "isWhite": false
+  })
 
     <main>
       <section class="hero" id="hero" style="background-image: url(img/hero-image@3x.jpg)">
