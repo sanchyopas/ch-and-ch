@@ -166,31 +166,52 @@ if (!isTouchDevice) {
       scrub: true, // Связь с прокруткой
     },
   }).to(image, { y: movement, ease: "none" }); // Параллакс-эффект
+
+  gsap.utils.toArray(".text-line").forEach((line, index) => {
+    gsap.fromTo(line,
+      {
+        opacity: 0,
+        transform: "translateY(100%)" // Начальная позиция и скрытие
+      },
+      {
+        opacity: 1,
+        transform: "translateY(0%)", // Конечная позиция, где текст будет видимым
+        duration: 1,
+        delay: index * 0.3, // Задержка между строками
+        ease: "power4.out"
+      });
+  });
+
+  gsap.utils.toArray(".to-top").forEach((line, index) => {
+    gsap.fromTo(line,
+      {
+        opacity: 0,
+        transform: "translateY(-100%)" // Начальная позиция и скрытие
+      },
+      {
+        opacity: 1,
+        transform: "translateY(0%)", // Конечная позиция, где текст будет видимым
+        duration: 1,
+        delay: index * 0.3, // Задержка между строками
+        ease: "power4.out"
+      });
+  });
+
+  gsap.utils.toArray(".fade").forEach((line, index, array) => {
+    // Задержка для первого и последнего элемента
+    const delayTime = (index === 0 || index === array.length - 1) ? 0.8 : index * 0.3;
+
+    gsap.fromTo(line,
+      {
+        opacity: 0, /* Начальная невидимость */
+      },
+      {
+        opacity: 1, /* Конечное состояние - полностью видимый */
+        duration: 1, /* Длительность анимации */
+        delay: delayTime, /* Задержка перед анимацией */
+        ease: "power4.out" /* Плавная анимация */
+      });
+  });
 }
 
-gsap.utils.toArray(".text-line").forEach((line, index) => {
-  gsap.fromTo(line,
-    {
-      opacity: 0,
-      transform: "translateY(100%)" // Начальная позиция и скрытие
-    },
-    {
-      opacity: 1,
-      transform: "translateY(0%)", // Конечная позиция, где текст будет видимым
-      duration: 1,
-      delay: index * 0.3, // Задержка между строками
-      ease: "power4.out"
-    });
-});
 
-gsap.utils.toArray(".fade").forEach((line, index) => {
-  gsap.fromTo(line,
-    {
-      opacity: 0, /* Начальная невидимость */
-    },
-    {
-      opacity: 1, /* Конечное состояние - полностью видимый */
-      duration: 1, /* Длительность анимации */
-      ease: "power4.out" /* Плавная анимация */
-    });
-});
