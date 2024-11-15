@@ -25,12 +25,15 @@
 }
 
 .text-swap-wrap {
-  overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .text-swap {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   height: 100%;
   transition: transform 0.3s ease-in-out;
 
