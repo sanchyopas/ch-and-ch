@@ -17,17 +17,12 @@ const bodyUnLock = (e) => {
 }
 
 const header = document.querySelector('.header');
-let positionTopHeader = header.getBoundingClientRect().top;
-
-
 
 // Функция для скролла к элементу
 function scrollToElement(elementId) {
   const element = document.getElementById(elementId);
-  // const headerHeight = document.querySelector('.header').offsetHeight;
   if (element) {
     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-    // const offsetPosition = elementPosition - headerHeight;
 
     document.querySelector('.header').classList.remove('_active');
     bodyUnLock();
