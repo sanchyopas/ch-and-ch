@@ -170,11 +170,9 @@ if (!isTouchDevice) {
   gsap.utils.toArray(".text-line").forEach((line, index) => {
     gsap.fromTo(line,
       {
-        opacity: 0,
         transform: "translateY(100%)" // Начальная позиция и скрытие
       },
       {
-        opacity: 1,
         transform: "translateY(0%)", // Конечная позиция, где текст будет видимым
         duration: 1,
         delay: index * 0.3, // Задержка между строками

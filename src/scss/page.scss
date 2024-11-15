@@ -123,6 +123,10 @@
   &__title {
     text-transform: none;
 
+    p {
+      overflow: hidden;
+    }
+
   }
 
   // .offer__subtitle
@@ -948,7 +952,6 @@
 
 .text-line {
   display: block;
-  opacity: 0;
   transform: translateY(100%);
   /* Начальная позиция текста */
   will-change: transform, opacity;
