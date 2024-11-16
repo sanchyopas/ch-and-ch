@@ -4,6 +4,7 @@ import './modules/smoothScroll.js'
 import './modules/popup.js'
 import './modules/burger.js'
 import './modules/api.js'
+import './modules/coockie.js'
 
 functions.isWebp();
 

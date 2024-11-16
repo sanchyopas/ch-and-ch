@@ -558,11 +558,7 @@
 
   // .projects__title
 
-  &__title {
-    @media screen and (min-width: 768px) {
-      max-width: 611px;
-    }
-  }
+  &__title {}
 
   // .projects__subtitle
   &__subtitle {
@@ -966,6 +962,7 @@
     margin-top: 24px;
 
     li {
+      position: relative;
       display: grid;
       grid-template-columns: 30px 447px;
       grid-template-rows: 1fr auto;
