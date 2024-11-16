@@ -3,6 +3,7 @@ import './modules/animation.js'
 import './modules/smoothScroll.js'
 import './modules/popup.js'
 import './modules/burger.js'
+import './modules/api.js'
 
 functions.isWebp();
 
@@ -22,19 +23,5 @@ if (mapTabBtn) {
 }
 
 
-// fetch('https://test-2422i.fresco.bz/api/cases', {
-//   method: 'GET', // Используйте 'POST', 'PUT', 'DELETE' или другой метод, если требуетс
-// })
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! Status: ${response.status}`);
-//     }
-//     return response.json(); // Преобразуем ответ в JSON
-//   })
-//   .then(data => {
-//     console.log(data); // Работайте с данными
-//   })
-//   .catch(error => {
-//     console.error('Error fetching data:', error); // Обрабатывайте ошибки
-//   });
+
 

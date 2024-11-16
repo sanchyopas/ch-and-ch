@@ -79,6 +79,47 @@ if (!isTouchDevice) {
     });
   });
 
+  gsap.utils.toArray('.implement__text p').forEach((line) => {
+    const text = line.querySelector('span');
+    if (text) {
+      gsap.fromTo(
+        text,
+        { y: 50 }, // Начальные значения
+        {
+          y: 0, // Элемент возвращается на место
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".implement__inner",
+            start: "top 70%", // Анимация начнётся, когда верх <p> достигает 70% экрана
+            end: "top 30%",  // Завершится к 30% экрана
+            scrub: 0.5, // Плавность анимации при скролле
+            toggleActions: "play none none none", // Анимация только один раз
+          },
+        }
+      );
+    }
+  });
+
+  gsap.utils.toArray('.implement__text img').forEach((image) => {
+    gsap.fromTo(
+      image,
+      {
+        transform: 'scale(0)',
+      }, // Начальные значения
+      {
+        transform: 'scale(1)',
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: image, // Триггер для изображения
+          start: "top 80%", // Появляется после текста
+          end: "top 30%",
+          scrub: 0.5,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  });
+
   gsap.utils.toArray(".to-top").forEach((line, index) => {
     gsap.fromTo(line,
       {
@@ -111,6 +152,9 @@ if (!isTouchDevice) {
   });
 } else {
   document.querySelectorAll('.text-line').forEach(line => {
+    line.style.transform = 'translateY(0%)';
+  });
+  document.querySelectorAll('.offer-text-line').forEach(line => {
     line.style.transform = 'translateY(0%)';
   });
 }

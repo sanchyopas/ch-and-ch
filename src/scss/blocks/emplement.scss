@@ -16,7 +16,20 @@
 
   // .implement__text
 
-  &__text {}
+  &__text {
+    p {
+      overflow: hidden;
+
+      span {
+        transform: translateY(100px);
+        display: inline-block;
+      }
+
+      img {
+        transform: scale(0);
+      }
+    }
+  }
 
   // .implement__btn
 

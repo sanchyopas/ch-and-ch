@@ -1,61 +1,73 @@
-.footer {
-  padding: 120px 0px 60px;
+.invite__inner {
+  border-top: 1px solid rgba(20, 20, 20, .3);
+}
 
-  @media screen and (max-width: 520px) {
-    padding: 60px 0px 60px;
-  }
+._btn {
+  transition: all $animation_speed;
 
-  // .footer__inner
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  &--white-to-white {
+    background: rgba(255, 255, 255, .3);
+    color: #fff;
 
-    @media screen and (max-width: 520px) {
-      flex-direction: column;
-      gap: 45px;
+    @media (hover: hover) {
+      &:hover {
+        background-color: #fff;
+        color: #141414
+      }
     }
   }
 
-  // .footer__list
-  &__list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  &--green-to-black {
+    background-color: #65684c;
+    color: #fff;
 
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      gap: 16px;
+    @media (hover: hover) {
+      &:hover {
+        background-color: #141414;
+        color: #fff;
+      }
     }
   }
 
-  // .footer__item
-  &__item {}
+  &--green-to-green {
+    background: rgba(101, 104, 76, .1);
+    color: #65684c;
 
-  // .footer__link
-
-  &__link {
-    color: rgba(20, 20, 20, 0.8);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
-    display: flex;
-    flex-direction: column;
-
-    // gap: 4px;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: rgba(20, 20, 20, 0.3);
+    @media (hover: hover) {
+      &:hover {
+        background-color: #65684c;
+        color: #fff;
+      }
     }
   }
 
-  // .footer__author
-  &__author {
-    img {
-      height: 24px;
+  //Для кнопок у которых есть статус активности
+  &--green-to-green-tab {
+    background: rgba(101, 104, 76, .1);
+    color: #65684c;
+
+    @media (hover: hover) {
+      &:hover {
+        background: rgba(101, 104, 76, .2);
+      }
+    }
+
+    &._active {
+      color: #fff;
+      background: #65684c;
+
+    }
+  }
+
+  //Для кнопок у которых hover с минимальным изменением цвета фона
+  &--green-to-green-min-active {
+    background: rgba(101, 104, 76, .1);
+    color: #65684c;
+
+    @media (hover: hover) {
+      &:hover {
+        background: rgba(101, 104, 76, .2);
+      }
     }
   }
 }
