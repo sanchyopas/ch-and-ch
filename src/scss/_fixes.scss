@@ -6,7 +6,6 @@
   }
 
   // .footer__inner
-
   &__inner {
     display: flex;
     align-items: center;
@@ -20,7 +19,6 @@
   }
 
   // .footer__list
-
   &__list {
     display: flex;
     align-items: center;
@@ -33,7 +31,6 @@
   }
 
   // .footer__item
-
   &__item {}
 
   // .footer__link
@@ -45,8 +42,8 @@
     line-height: 150%;
     display: flex;
     flex-direction: column;
-    // gap: 4px;
 
+    // gap: 4px;
     &::after {
       content: "";
       width: 100%;
@@ -56,7 +53,6 @@
   }
 
   // .footer__author
-
   &__author {
     img {
       height: 24px;
