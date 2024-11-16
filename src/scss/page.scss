@@ -85,6 +85,22 @@
   }
 }
 
+.offer__title .offer-text-line {
+  display: inline-block;
+  /* Чтобы элементы располагались в одну строку */
+  transform: translateY(100%);
+  /* Скрываем текст вниз */
+  will-change: transform;
+  /* Ускоряет работу анимации */
+  overflow: hidden;
+  /* Обрезаем текст за пределами родительского элемента */
+}
+
+.offer__title p {
+  margin: 0;
+  padding: 0;
+}
+
 .logos {
   display: flex;
   animation: slide 30s linear infinite;
@@ -168,11 +184,16 @@
       bottom: 80px;
       right: -150px;
 
-      @media screen and (max-width: 1595px) {
-        width: 160px;
-        height: 192px;
+      @media screen and (max-width: 992px) {
+        width: 200px;
+        height: 250px;
         bottom: -252px;
         right: 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 160px;
+        height: 192px;
       }
     }
 
@@ -182,11 +203,20 @@
       bottom: -152px;
       left: 20px;
 
-      @media screen and (max-width: 1595px) {
-        width: 120px;
-        height: 144px;
+      @media screen and (max-width: 1200px) {
+        left: -60px;
+      }
+
+      @media screen and (max-width: 992px) {
+        width: 180px;
+        height: 220px;
         bottom: -280px;
         left: 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 120px;
+        height: 144px;
       }
     }
 
@@ -462,7 +492,6 @@
   color: rgb(255, 255, 255);
   font-size: 14px;
   font-weight: 400;
-  white-space: no-wrap;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -610,12 +639,33 @@
 
     @media (hover:hover) {
       &:hover {
-        background-color: rgba($color: #ffffff, $alpha: 1.0);
-        color: rgba($color: #141414, $alpha: 1.0);
+        background-color: #65684c;
+        color: #fff !important;
 
         .text-swap {
           transform: translateY(-100%);
+
+          &::before {
+            background-image: url("@img/icons/Fabrikant-white.svg");
+          }
         }
+      }
+    }
+
+    .text-swap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        content: "";
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+      }
+
+      &::before {
+        background-image: url("@img/icons/Fabrikant.svg");
       }
     }
   }
@@ -961,6 +1011,8 @@
   }
 }
 
+
+
 // .text-mask-container {
 //   width: 100%;
 //   height: auto;
@@ -974,13 +1026,12 @@
 //   position: relative;
 // }
 
-@media screen and (min-width: 992px) {
-  .text-line {
-    display: block;
-    transform: translateY(100%);
-    /* Начальная позиция текста */
-    will-change: transform, opacity;
-  }
+
+.text-line {
+  display: block;
+  transform: translateY(100%);
+  /* Начальная позиция текста */
+  will-change: transform, opacity;
 }
 
 // .text-mask-container {

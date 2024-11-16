@@ -5,15 +5,7 @@
   padding: 13px 0px;
   width: 100%;
 
-  &._active {
-    .header__burger {
-      background-image: url("@img/icons/X.svg")
-    }
 
-    .nav {
-      left: 0;
-    }
-  }
 
   &--white {
     .header__logo {
@@ -48,6 +40,46 @@
 
     .header__burger {
       background-image: url('@img/icons/Menu-black.svg');
+    }
+  }
+
+  &._active {
+    .header__logo {
+      background-image: url('@img/logo-ch-ch.svg');
+    }
+
+    .header__burger {
+      background-image: url("@img/icons/X.svg")
+    }
+
+    .nav__link,
+    .header__phone,
+    .header__lang {
+      color: rgba($color: #ffffff, $alpha: 1.0);
+    }
+
+    .nav {
+      left: 0;
+    }
+
+    .header__social {
+      a {
+        &.tg {
+          background-image: url('@img/icons/Telegram.svg');
+        }
+
+        &.vk {
+          background-image: url('@img/icons/Vk.svg');
+        }
+
+        &.zen {
+          background-image: url('@img/icons/Zen.svg');
+        }
+
+        &.wa {
+          background-image: url('@img/icons/Whatsapp.svg');
+        }
+      }
     }
   }
 
