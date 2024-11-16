@@ -1,0 +1,111 @@
+{
+  "success": true,
+  "message": "",
+  "object": {
+    "cases": [
+      {
+        "order": "",
+        "id": 53,
+        "alias": "dodo",
+        "seo": {
+          "title": null,
+          "description": null
+        },
+        "main_screen": {
+          "title": "Интерьеры сети \"ДОДО ПИЦЦА\"",
+          "industries": ["Рестораны"],
+          "preview": "images/48a1cfab065561a24b58686e1dc8701b.webp",
+          "preview_text": "человек уместили на площади 45м<sub>2</sub>",
+          "preview_tag": [
+            {
+              "tag": "Dodo Пицца",
+              "icon": null
+            },
+            {
+              "tag": "2023",
+              "icon": null
+            }
+          ],
+          "subtitle": "400 человек уместили на площади 45м<sub>2</sub>",
+          "preview_numbers": "400",
+          "show_main_button": "true",
+          "services": []
+        },
+        "language": {
+          "eng": null,
+          "web": 53
+        }
+      },
+      {
+        "order": "",
+        "id": 55,
+        "alias": "ne-dodo",
+        "seo": {
+          "title": null,
+          "description": null
+        },
+        "main_screen": {
+          "title": "Не Интерьеры сети \"ДОДО ПИЦЦА\"",
+          "industries": ["Офисы"],
+          "preview": "images/48a1cfab065561a24b58686e1dc8701b.webp",
+          "preview_text": "человек уместили на площади 45м<sub>2</sub>",
+          "preview_tag": [
+            {
+              "tag": "Dodo Пицца",
+              "icon": null
+            },
+            {
+              "tag": "2023",
+              "icon": null
+            }
+          ],
+          "subtitle": "400 человек уместили на площади 45м<sub>2</sub>",
+          "preview_numbers": "400",
+          "show_main_button": "true",
+          "services": []
+        },
+        "language": {
+          "eng": null,
+          "web": 55
+        }
+      }
+    ],
+    "page": {
+      "filter_industries": [
+        {
+          "MIGX_id": "1",
+          "tag": "Офисы",
+          "icon": ""
+        },
+        {
+          "MIGX_id": "2",
+          "tag": "Рестораны",
+          "icon": ""
+        },
+        {
+          "MIGX_id": "3",
+          "tag": "Торговые сети",
+          "icon": ""
+        },
+        {
+          "MIGX_id": "4",
+          "tag": "Гостиницы",
+          "icon": ""
+        },
+        {
+          "MIGX_id": "5",
+          "tag": "Автосалоны",
+          "icon": ""
+        }
+      ],
+      "main_screen_title": "Персональные бизнес-интерьеры",
+      "main_screen_subtitle": "от идеи, до воплощения",
+      "language": {
+        "eng": 34,
+        "web": 5
+      }
+    },
+    "total": 2
+  },
+  "code": 200
+}
