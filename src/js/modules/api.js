@@ -2,10 +2,7 @@ import { bodyLock, bodyUnLock } from "./functions.js"
 
 const URL_CASES = "https://test-2422i.fresco.bz/api/cases";
 
-const loadGif = () => {
-  document.getElementById('projects-grid').classList.add('_load');
-}
-
+// Функиця загрузки заголовков, и прочего на сайт
 const pageInfo = (data) => {
   const htmlHeadSection = `
         <h2 class="projects__title _title">${data.main_screen_title}</h2>
@@ -13,10 +10,12 @@ const pageInfo = (data) => {
 
   document.getElementById("projects-head-section").innerHTML = htmlHeadSection;
 }
-
+// Функиця фильтрации карточек
 const filteringСards = (e) => {
   const dataTag = e.currentTarget.dataset.tag;
-  // Показать лоадер
+  document.querySelectorAll('.filter__btn').forEach(btn => btn.classList.remove('_active'));
+  e.currentTarget.classList.add('_active');
+
   const loader = document.querySelector('.loader');
   if (loader) {
     bodyLock();
@@ -42,7 +41,7 @@ const filteringСards = (e) => {
       console.error('Error fetching data:', error);
     })
     .finally(() => {
-      // Скрыть лоадер в любом случае (успех или ошибка)
+
       if (loader) {
         bodyUnLock();
         loader.style.opacity = '0';
@@ -52,6 +51,7 @@ const filteringСards = (e) => {
 
 };
 
+// Функция рендеринга тегов
 const tagsGrid = (data) => {
   const tagsHtml = data.filter_industries.map(tag => {
     return `<button type="button" data-tag="${tag.tag}" class="filter__btn">
@@ -62,12 +62,13 @@ const tagsGrid = (data) => {
 
   document.getElementById('tags').innerHTML = tagsHtml;
 
+  // При формировании тегов сразу вешаем слушатель, так как они формируются динамически
   const filterBtn = document.querySelectorAll('.filter__btn');
   if (filterBtn) {
     filterBtn.forEach(btn => btn.addEventListener('click', filteringСards))
   }
 }
-
+// Функция формирования и рендеринга сетки карточек
 const projectsGrid = (data) => {
   if (data.length > 0) {
     const gridHtml = data.map(item => {
@@ -110,11 +111,8 @@ const projectsGrid = (data) => {
   }
 }
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
+  // Запрос при загрузке данных
   fetch(URL_CASES, {
     method: 'GET',
   })
@@ -127,8 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       // url к информации
       const PAGE_INFO_URL = data.object;
-
-      console.log(data);
 
       pageInfo(PAGE_INFO_URL.page);
       tagsGrid(PAGE_INFO_URL.page);

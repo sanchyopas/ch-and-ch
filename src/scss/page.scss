@@ -738,6 +738,10 @@
       }
     }
 
+    &._active {
+      background: rgba(101, 104, 76, 0.3);
+    }
+
   }
 }
 
@@ -887,21 +891,23 @@
 
   // .step__right
 
-  &__right {}
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+      max-width: 397px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 
   // .step__parag
 
-  &__parag {
-    max-width: 397px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
-
-    &+& {
-      margin-top: 16px;
-    }
-  }
+  &__parag {}
 }
 
 .doc {
