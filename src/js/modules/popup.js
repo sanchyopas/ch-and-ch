@@ -1,3 +1,4 @@
+import { bodyLock, bodyUnLock } from "./functions";
 // Попап
 
 const openPopup = (event) => {
