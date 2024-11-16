@@ -962,47 +962,47 @@
     margin-top: 24px;
 
     li {
-      position: relative;
-      display: grid;
-      grid-template-columns: 30px 447px;
-      grid-template-rows: 1fr auto;
-      justify-items: start;
-      column-gap: 21px;
-      row-gap: 4px;
 
-      @media screen and (max-width: 1200px) {
-        grid-template-columns: 30px 1fr;
-      }
-
-      img {
-        grid-row: span 2;
-        margin-top: 5px;
-      }
 
       a {
         position: relative;
-        color: rgba(20, 20, 20, 0.8);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 150%;
+        display: grid;
+        grid-template-columns: 30px 447px;
+        grid-template-rows: 1fr auto;
+        justify-items: start;
+        column-gap: 21px;
+        row-gap: 4px;
+
+        @media screen and (max-width: 1200px) {
+          grid-template-columns: 30px 1fr;
+        }
+
+        img {
+          grid-row: span 2;
+          margin-top: 5px;
+        }
 
 
-        @media (hover:hover) {
-          &:hover::before {
-            background-color: rgba(101, 104, 76, 1);
+        .name {
+          position: relative;
+          display: inline;
+          color: rgba(20, 20, 20, 0.8);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+          text-decoration: underline;
+          text-underline-offset: 5px;
+          text-decoration-color: rgba(101, 104, 76, 0.5);
+          transition: 0.3s;
+
+
+          @media (hover:hover) {
+            &:hover {
+              text-decoration-color: rgba(101, 104, 76, 1);
+            }
           }
         }
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background-color: rgba(101, 104, 76, 0.5);
-          transition: .3s;
-        }
       }
 
       span {
