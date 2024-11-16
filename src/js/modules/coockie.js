@@ -26,7 +26,7 @@ document.getElementById('accept-consent').addEventListener('click', () => {
 
 // Проверить наличие согласия в cookie
 window.addEventListener('load', () => {
-  if (getCookie('userConsent') === 'accepted') {
-    document.getElementById('coockie').style.display = 'none';
+  if (getCookie('userConsent') != 'accepted') {
+    document.getElementById('coockie').style.display = 'block';
   }
 });

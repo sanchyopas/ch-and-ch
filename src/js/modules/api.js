@@ -7,8 +7,9 @@ const pageInfo = (data) => {
   const htmlHeadSection = `
         <h2 class="projects__title _title">${data.main_screen_title}</h2>
         <p class="projects__subtitle">${data.main_screen_subtitle}</p>`;
-
-  document.getElementById("projects-head-section").innerHTML = htmlHeadSection;
+  if (document.getElementById("projects-head-section")) {
+    document.getElementById("projects-head-section").innerHTML = htmlHeadSection;
+  }
 }
 // Функиця фильтрации карточек
 const filteringСards = (e) => {
@@ -59,8 +60,9 @@ const tagsGrid = (data) => {
         <span>${tag.tag}</span>
       </button>`
   }).join('');
-
-  document.getElementById('tags').innerHTML = tagsHtml;
+  if (document.getElementById('tags')) {
+    document.getElementById('tags').innerHTML = tagsHtml;
+  }
 
   // При формировании тегов сразу вешаем слушатель, так как они формируются динамически
   const filterBtn = document.querySelectorAll('.filter__btn');
@@ -99,15 +101,19 @@ const projectsGrid = (data) => {
             </div>
           </div>`;
     }).join('');
-    document.getElementById('projects-grid').classList.remove('_no-grid');
-    document.getElementById('projects-grid').innerHTML = gridHtml;
+    if (document.getElementById('projects-grid')) {
+      document.getElementById('projects-grid').classList.remove('_no-grid');
+      document.getElementById('projects-grid').innerHTML = gridHtml;
+    }
+
   } else {
     const gridHtml = `
       <div class="empty">Пусто</div>
     `
-
-    document.getElementById('projects-grid').classList.add('_no-grid');
-    document.getElementById('projects-grid').innerHTML = gridHtml;
+    if (document.getElementById('projects-grid')) {
+      document.getElementById('projects-grid').classList.add('_no-grid');
+      document.getElementById('projects-grid').innerHTML = gridHtml;
+    }
   }
 }
 
