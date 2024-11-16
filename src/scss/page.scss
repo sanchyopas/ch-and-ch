@@ -1378,7 +1378,6 @@
 }
 
 .interiors-slider {
-  display: none;
   position: relative;
 
   // .interiors-slider__slider
@@ -1401,6 +1400,18 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @media screen and (max-width: 1200px) {
+      height: 620px;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 520px;
+    }
+
+    @media screen and (max-width: 520px) {
+      height: 240px;
+    }
   }
 
   .swiper {}
@@ -1409,7 +1420,11 @@
 
   .swiper-pagination {}
 
-  .swiper-navigation {}
+  .swiper-navigation {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
 
   .swiper-button-prev {}
 
@@ -1422,15 +1437,84 @@
 }
 
 .thumbs-slider {
+  width: 100%;
+  display: block;
   position: absolute;
-  bottom: 0px;
+  bottom: 40px;
   left: 0px;
   z-index: 99;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    bottom: 8px;
+  }
 
   // .thumbs-slider__slide
 
   &__slide {
-    width: 200px;
-    height: 15px;
+    position: relative;
+    width: 171px !important;
+    height: 95px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      width: 120px !important;
+      height: 60px;
+    }
+
+    @media screen and (max-width: 520px) {
+      width: 80px !important;
+      height: 48px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .swiper-slide-thumb-active {
+    &::before {
+      background-color: transparent;
+    }
+  }
+}
+
+.slider-prev,
+.slider-next {
+  width: 60px;
+  height: 60px;
+  margin-top: 0px;
+  border-radius: 40px;
+  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.2);
+  transition: $animation_speed;
+
+
+  &::after {
+    font-size: 14px;
+    color: rgba($color: #ffffff, $alpha: 1.0);
+  }
+
+  @media (hover:hover) {
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+
+      &::after {
+        color: rgba($color: #141313, $alpha: 1.0);
+      }
+    }
   }
 }

@@ -1,247 +1,298 @@
 <!DOCTYPE html>
 <html>
-  @@include('html/head.html'{ "title":"Ch&Ch" })
+@@include('html/head.html'{ "title":"Ch&Ch" })
 
-  <body>
-    @@include('html/_header.html',{ "isWhite": true })
+<body>
+  @@include('html/_header.html',{ "isWhite": true })
 
-    <main class="main-top-margin">
-      <section class="project _padded-section">
-        <div class="project__tags">
+  <main class="main-top-margin">
+    <section class="project _padded-section">
+      <div class="project__tags">
+        <a href="" class="tag tag--dark">
+          <img src="@img/icons/Arrow_Left.svg" alt="" />
+          <span>Проекты</span>
+        </a>
+        <div class="tags">
           <a href="" class="tag tag--dark">
-            <img src="@img/icons/Arrow_Left.svg" alt="" />
-            <span>Проекты</span>
+            <img src="@img/icons/Restaurant.svg" alt="" />
+            Рестораны
           </a>
-          <div class="tags">
-            <a href="" class="tag tag--dark">
-              <img src="@img/icons/Restaurant.svg" alt="" />
-              Рестораны
-            </a>
-            <a href="" class="tag tag--dark tag-dark--brand-logo">
-              <img src="@img/logo-dodo.png" alt="" />
-              Dodo Пицца
-            </a>
-            <a href="" class="tag tag--dark"> 2023 </a>
-          </div>
+          <a href="" class="tag tag--dark tag-dark--brand-logo">
+            <img src="@img/logo-dodo.png" alt="" />
+            Dodo Пицца
+          </a>
+          <a href="" class="tag tag--dark"> 2023 </a>
         </div>
-        <div class="container">
-          <div class="project__header">
-            <h1 class="project__title _title">Интерьеры сети «Додо Пицца»</h1>
-            <p class="project__subtitle">400 человек уместили на площади 45 м²</p>
-          </div>
-          <div class="project__slider swiper">
-            <div class="swiper-wrapper project__swiper-wrapper">
-              <div class="swiper-slide project__slide" style="background-image: url(img/kfc.jpeg)">
-                <div class="project__slider-logo">
-                  <img src="@img/dodo-pizza_white.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide project__slide" style="background-image: url(img/hero-image@2x.jpg)">
-                <div class="project__slider-logo">
-                  <img src="@img/dodo-pizza_white.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide project__slide" style="background-image: url(img/kfc.jpeg)">
-                <div class="project__slider-logo">
-                  <img src="@img/dodo-pizza_white.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-navigation">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
+      </div>
+      <div class="container">
+        <div class="project__header">
+          <h1 class="project__title _title">Интерьеры сети «Додо Пицца»</h1>
+          <p class="project__subtitle">400 человек уместили на площади 45 м²</p>
         </div>
-      </section>
-
-      <section class="interiors">
-        <div class="container">
-          <div class="interiors__inner _padded-section">
-            <div class="row interiors__row">
-              <div class="col-lg">
-                <h1 class="project__title _title">Интерьеры сети «Додо Пицца»</h1>
-                <p class="project__subtitle project__subtitle--fz">400 человек уместили на площади 45 м²</p>
+        <div class="project__slider swiper">
+          <div class="swiper-wrapper project__swiper-wrapper">
+            <div class="swiper-slide project__slide" style="background-image: url(img/kfc.jpeg)">
+              <div class="project__slider-logo">
+                <img src="@img/dodo-pizza_white.png" alt="" />
               </div>
-              <div class="col-lg">
-                <p class="project__text">Рестораны быстрого питания часто имеют ограниченное пространство, поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения без переполнения. Рестораны быстрого питания часто имеют ограниченное пространство, поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения без переполнения.</p>
+            </div>
+            <div class="swiper-slide project__slide" style="background-image: url(img/hero-image@2x.jpg)">
+              <div class="project__slider-logo">
+                <img src="@img/dodo-pizza_white.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide project__slide" style="background-image: url(img/kfc.jpeg)">
+              <div class="project__slider-logo">
+                <img src="@img/dodo-pizza_white.png" alt="" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="interiors-slider">
-        <div class="interiors-slider__slider swiper">
-          <div class="interiors-slider__wrapper swiper-wrapper">
-            <div class="interiors-slider__slide">
-              <img src="@img/gallery.jpeg" alt="" />
-            </div>
-            <div class="interiors-slider__slide">
-              <img src="@img/gallery-1.jpeg" alt="" />
-            </div>
-            <div class="interiors-slider__slide">
-              <img src="@img/gallery.jpeg" alt="" />
-            </div>
-            <div class="interiors-slider__slide">
-              <img src="@img/gallery.jpeg" alt="" />
-            </div>
-          </div>
+          <div class="swiper-pagination"></div>
           <div class="swiper-navigation">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
         </div>
-        <!-- Слайдер миниатюр -->
-        <div class="swiper-container thumbs-slider">
-          <div class="thumbs-slider__wrapper swiper-wrapper">
-            <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
-            <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery-1.jpeg" alt="" /></div>
-            <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="indicators _padded-section">
-        <div class="container">
-          <div class="indicators__inner">
-            <h1 class="project__title _title">Интерьеры сети «Додо Пицца»</h1>
-            <p class="project__subtitle project__subtitle--fz">400 человек уместили на площади 45 м²</p>
-            <div class="indicators__row row">
-              <div class="col-12 col-md-4">
-                <div class="indicators__card card-indicator">
-                  <div class="card-indicator__top">
-                    <p class="card-indicator__number">3</p>
-                    <p class="card-indicator__name">месяца</p>
-                  </div>
-                  <p class="project__text">срок выполнения проекта</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="indicators__card card-indicator">
-                  <div class="card-indicator__top">
-                    <p class="card-indicator__number">45</p>
-                    <p class="card-indicator__name">м²</p>
-                  </div>
-                  <p class="project__text">площадь объекта</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="indicators__card card-indicator">
-                  <div class="card-indicator__top">
-                    <p class="card-indicator__number">400</p>
-                    <p class="card-indicator__name">человек</p>
-                  </div>
-                  <p class="project__text">может вместить объект</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="indicators__card card-indicator">
-                  <div class="card-indicator__top">
-                    <p class="card-indicator__number">80</p>
-                    <p class="card-indicator__name">стульев</p>
-                  </div>
-                  <p class="project__text">изготовлено</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="indicators__card card-indicator">
-                  <div class="card-indicator__top">
-                    <p class="card-indicator__number">40</p>
-                    <p class="card-indicator__name">диванов</p>
-                  </div>
-                  <p class="project__text">изготовлено</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="indicators__card card-indicator">
-                  <div class="card-indicator__top">
-                    <p class="card-indicator__number">40</p>
-                    <p class="card-indicator__name">столов</p>
-                  </div>
-                  <p class="project__text">изготовлено</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="full-screen-image" style="background-image: url(img/image.jpeg)"></section>
-
-      <section class="lists _padded-section">
-        <div class="container">
-          <div class="lists__row row">
+    <section class="interiors">
+      <div class="container">
+        <div class="interiors__inner _padded-section">
+          <div class="row interiors__row">
             <div class="col-lg">
-              <h3 class="lists__title">Интерьеры сети «Додо Пицца»</h3>
-              <ol class="list__list list">
-                <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
-                <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения без переполнения.</li>
-                <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
-                <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения без переполнения.</li>
-              </ol>
+              <h1 class="project__title _title">Интерьеры сети «Додо Пицца»</h1>
+              <p class="project__subtitle project__subtitle--fz">400 человек уместили на площади 45 м²</p>
             </div>
             <div class="col-lg">
-              <h3 class="lists__title">Интерьеры сети «Додо Пицца»</h3>
-              <ul class="list__list list">
-                <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
-                <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения без переполнения.</li>
-                <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
-                <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения без переполнения.</li>
-              </ul>
+              <p class="project__text">Рестораны быстрого питания часто имеют ограниченное пространство, поэтому мебель
+                должна быть разработана, чтобы максимизировать вместимость сидения без переполнения. Рестораны быстрого
+                питания часто имеют ограниченное пространство, поэтому мебель должна быть разработана, чтобы
+                максимизировать вместимость сидения без переполнения.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      @@include('html/blocks/implement.html')
-    </main>
+    <section class="interiors-slider">
+      <div class="interiors-slider__slider swiper">
+        <div class="interiors-slider__wrapper swiper-wrapper">
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery-1.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery-1.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery-1.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery-1.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery-1.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery.jpeg" alt="" />
+          </div>
+          <div class="interiors-slider__slide swiper-slide">
+            <img src="@img/gallery-1.jpeg" alt="" />
+          </div>
+        </div>
 
-    @@include('html/_footer.html') @@include('html/_popup.html')
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      // init Swiper:
-      const project_slider = new Swiper(".project__slider", {
-        slidesPerView: 1,
-        loop: false,
-        spaceBetween: 24,
-        autoHeight: false,
-        effect: "fade",
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
+        <div class="swiper-navigation">
+          <div class="slider-prev interiors-slider-prev swiper-button-prev"></div>
+          <div class="slider-next interiors-slider-next swiper-button-next"></div>
+        </div>
+      </div>
+      <!-- Слайдер миниатюр -->
+      <div class="swiper-container thumbs-slider">
+        <div class="thumbs-slider__wrapper swiper-wrapper">
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery-1.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery-1.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery-1.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery-1.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery-1.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery.jpeg" alt="" /></div>
+          <div class="thumbs-slider__slide swiper-slide"><img src="@img/gallery-1.jpeg" alt="" /></div>
+        </div>
+      </div>
+    </section>
 
-      const interiors_slider = new Swiper(".interiors-slider__slider", {
-        slidesPerView: 1,
-        loop: false,
-        spaceBetween: 24,
-        autoHeight: false,
-        effect: "fade",
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+    <section class="indicators _padded-section">
+      <div class="container">
+        <div class="indicators__inner">
+          <h1 class="project__title _title">Интерьеры сети «Додо Пицца»</h1>
+          <p class="project__subtitle project__subtitle--fz">400 человек уместили на площади 45 м²</p>
+          <div class="indicators__row row">
+            <div class="col-12 col-md-4">
+              <div class="indicators__card card-indicator">
+                <div class="card-indicator__top">
+                  <p class="card-indicator__number">3</p>
+                  <p class="card-indicator__name">месяца</p>
+                </div>
+                <p class="project__text">срок выполнения проекта</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="indicators__card card-indicator">
+                <div class="card-indicator__top">
+                  <p class="card-indicator__number">45</p>
+                  <p class="card-indicator__name">м²</p>
+                </div>
+                <p class="project__text">площадь объекта</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="indicators__card card-indicator">
+                <div class="card-indicator__top">
+                  <p class="card-indicator__number">400</p>
+                  <p class="card-indicator__name">человек</p>
+                </div>
+                <p class="project__text">может вместить объект</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="indicators__card card-indicator">
+                <div class="card-indicator__top">
+                  <p class="card-indicator__number">80</p>
+                  <p class="card-indicator__name">стульев</p>
+                </div>
+                <p class="project__text">изготовлено</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="indicators__card card-indicator">
+                <div class="card-indicator__top">
+                  <p class="card-indicator__number">40</p>
+                  <p class="card-indicator__name">диванов</p>
+                </div>
+                <p class="project__text">изготовлено</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="indicators__card card-indicator">
+                <div class="card-indicator__top">
+                  <p class="card-indicator__number">40</p>
+                  <p class="card-indicator__name">столов</p>
+                </div>
+                <p class="project__text">изготовлено</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      const thumbsSlider = new Swiper(".thumbs-slider", {
-        spaceBetween: 10,
-        slidesPerView: 0,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-      });
+    <section class="full-screen-image" style="background-image: url(img/image.jpeg)"></section>
 
-      // Связывание основного слайдера с миниатюрами
-      interiors_slider.controller.control = thumbsSlider;
-      thumbsSlider.controller.control = interiors_slider;
-    </script>
+    <section class="lists _padded-section">
+      <div class="container">
+        <div class="lists__row row">
+          <div class="col-lg">
+            <h3 class="lists__title">Интерьеры сети «Додо Пицца»</h3>
+            <ol class="list__list list">
+              <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
+              <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения
+                без переполнения.</li>
+              <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
+              <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения
+                без переполнения.</li>
+            </ol>
+          </div>
+          <div class="col-lg">
+            <h3 class="lists__title">Интерьеры сети «Додо Пицца»</h3>
+            <ul class="list__list list">
+              <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
+              <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения
+                без переполнения.</li>
+              <li class="list__item">Рестораны быстрого питания часто имеют ограниченное пространство.</li>
+              <li class="list__item">Поэтому мебель должна быть разработана, чтобы максимизировать вместимость сидения
+                без переполнения.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="js/app.min.js"></script>
-  </body>
+    @@include('html/blocks/implement.html')
+  </main>
+
+  @@include('html/_footer.html') @@include('html/_popup.html')
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // init Swiper:
+    const project_slider = new Swiper(".project__slider", {
+      slidesPerView: 3,
+      loop: false,
+      spaceBetween: 24,
+      autoHeight: false,
+      effect: "fade",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    const thumbsSlider = new Swiper(".thumbs-slider", {
+      spaceBetween: 10,
+      slidesPerView: 'auto',
+      loop: true,
+      initialSlide: 1,
+      //freeMode: false,
+      //watchSlidesVisibility: true,
+      //watchSlidesProgress: true,
+    });
+
+    const interiors_slider = new Swiper(".interiors-slider__slider", {
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 24,
+      autoHeight: false,
+      effect: "fade",
+      navigation: {
+        nextEl: ".interiors-slider-next",
+        prevEl: ".interiors-slider-prev",
+      },
+      thumbs: {
+        swiper: thumbsSlider
+      }
+    });
+
+
+
+
+
+    // Связывание основного слайдера с миниатюрами
+    //interiors_slider.controller.control = thumbsSlider;
+    //thumbsSlider.controller.control = interiors_slider;
+  </script>
+
+  <script src="js/app.min.js"></script>
+</body>
+
 </html>
