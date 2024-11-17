@@ -6,27 +6,58 @@ import { bodyUnLock } from "./functions.js";
 ****
 */
 
-const scrollToElement = (elementId) => {
-  const element = document.getElementById(elementId);
-  if (element) {
-    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.nav__link');
+  const isMainPage = window.location.pathname === "/";
 
-    document.querySelector('.header').classList.remove('_active');
-    bodyUnLock();
+  // Функция для плавного скролла к элементу
+  const scrollToElement = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
 
-    window.scrollTo({
-      top: elementPosition,
-      behavior: 'smooth'
-    });
-  }
-}
+      // Закрытие меню и разблокировка body, если требуется
+      document.querySelector('.header')?.classList.remove('_active');
+      bodyUnLock?.();
 
-// Обработчик клика на кнопки
-document.querySelectorAll('[data-anchor]').forEach(button => {
-  button.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('data-anchor');
-    scrollToElement(targetId);
-    document.querySelector('.nav').classList.remove('_active');
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  // Обработка кликов на ссылки
+  links.forEach(link => {
+    const anchor = link.getAttribute('data-anchor');
+
+    if (isMainPage) {
+      // На главной странице выполняем скролл
+      link.addEventListener('click', (event) => {
+        if (anchor) {
+          event.preventDefault();
+          scrollToElement(anchor);
+
+          // Закрытие навигации (если требуется)
+          document.querySelector('.nav')?.classList.remove('_active');
+        }
+      });
+    } else {
+      // На других страницах сохраняем секцию в localStorage
+      link.addEventListener('click', () => {
+        if (anchor) {
+          localStorage.setItem('scrollToSection', anchor);
+        }
+      });
+    }
   });
+
+  // Скроллим к секции, если есть сохранённое значение
+  if (isMainPage) {
+    const savedAnchor = localStorage.getItem('scrollToSection');
+    if (savedAnchor) {
+      localStorage.removeItem('scrollToSection'); // Очищаем после использования
+      scrollToElement(savedAnchor);
+    }
+  }
 });

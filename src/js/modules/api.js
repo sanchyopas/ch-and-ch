@@ -184,6 +184,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Функция для сохранения тега сразу
-
 
