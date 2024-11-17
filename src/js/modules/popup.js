@@ -21,7 +21,7 @@ const openPopup = (event) => {
 }
 
 const closePopup = (event) => {
-  let popupCloseBtn = event.target.closest('.popup__close');
+  let popupCloseBtn = event.target.closest('[data-close]');
   if (popupCloseBtn) {
     const popup = popupCloseBtn.closest('.popup');
     popup.classList.remove('popup_show');
@@ -60,7 +60,7 @@ if (popupBtn) {
   });
 }
 
-const closePopupBtn = document.querySelectorAll('.popup__close');
+const closePopupBtn = document.querySelectorAll('[data-close]');
 if (closePopupBtn) {
   closePopupBtn.forEach(btn => {
     btn.addEventListener('click', (event) => {
