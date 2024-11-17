@@ -158,5 +158,11 @@ if (!isTouchDevice) {
   document.querySelectorAll('.offer-text-line').forEach(line => {
     line.style.transform = 'translateY(0%)';
   });
+  document.querySelectorAll('.implement__text img').forEach(line => {
+    line.style.transform = 'scale(1)';
+  });
+  document.querySelectorAll('.implement__text p span').forEach(line => {
+    line.style.transform = 'translateY(0%)';
+  });
 }
 
