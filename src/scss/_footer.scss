@@ -58,8 +58,17 @@
   // .footer__author
 
   &__author {
+    opacity: .8;
+    transition: $animation_speed;
+
     img {
       height: 24px;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
