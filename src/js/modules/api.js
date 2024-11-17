@@ -82,7 +82,7 @@ const projectsGrid = (data) => {
       return `
           <div class="projects__card card">
             <div class="card__bg" style="background-image: url(${main_screen.preview})"></div>
-            <a href="/project/${alias}" class="card__link"></a>
+            <a href="/projects/${alias}" class="card__link"></a>
             <div class="card__content">
               <div class="tags">
                 ${main_screen.preview_tag.map(tag => {
@@ -96,7 +96,7 @@ const projectsGrid = (data) => {
               </div>
               <div class="card__count">
                 <p class="card__number">${main_screen.preview_numbers}</p>
-                <p class="card__text">${main_screen.subtitle}}</p>
+                <p class="card__text">${main_screen.subtitle}</p>
               </div>
             </div>
           </div>`;
