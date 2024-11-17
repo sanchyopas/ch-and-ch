@@ -52,12 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Скроллим к секции, если есть сохранённое значение
+  // Скроллим к секции после полной загрузки страницы
   if (isMainPage) {
     const savedAnchor = localStorage.getItem('scrollToSection');
     if (savedAnchor) {
-      localStorage.removeItem('scrollToSection'); // Очищаем после использования
-      scrollToElement(savedAnchor);
+      window.addEventListener('load', () => {
+        localStorage.removeItem('scrollToSection'); // Очищаем после использования
+        scrollToElement(savedAnchor);
+      });
     }
   }
 });
