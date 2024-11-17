@@ -1,4 +1,5 @@
 import { bodyLock, bodyUnLock } from "./functions.js"
+import { followTheLink } from "./follow_link.js";
 
 const URL_CASES = "https://test-2422i.fresco.bz/api/cases";
 
@@ -13,6 +14,7 @@ const pageInfo = (data) => {
 }
 // Функиця фильтрации карточек
 const filteringСards = (e) => {
+  e.preventDefault(); // Останавливаем стандартное поведение
   const dataTag = e.currentTarget.dataset.tag;
   document.querySelectorAll('.filter__btn').forEach(btn => btn.classList.remove('_active'));
   e.currentTarget.classList.add('_active');
@@ -35,7 +37,7 @@ const filteringСards = (e) => {
     })
     .then(data => {
       const filteredCards = data.object.cases.filter(data => data.main_screen.industries[0] === dataTag);
-      projectsGrid(filteredCards)
+      projectsGrid(filteredCards);
 
     })
     .catch(error => {
@@ -68,6 +70,24 @@ const tagsGrid = (data) => {
   const filterBtn = document.querySelectorAll('.filter__btn');
   if (filterBtn) {
     filterBtn.forEach(btn => btn.addEventListener('click', filteringСards))
+  }
+}
+
+const tagsGridHome = (data) => {
+  const tagsHtml = data.filter_industries.map(tag => {
+    return `<a href="/projects.html/${tag.tag}" data-link class="filter__btn">
+        ${tag.icon != "" ? `<img src="${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
+        <span>${tag.tag}</span>
+      </a>`
+  }).join('');
+  if (document.getElementById('tags-home')) {
+    document.getElementById('tags-home').innerHTML = tagsHtml;
+  }
+
+  // При формировании тегов сразу вешаем слушатель, так как они формируются динамически
+  const filterBtn = document.querySelectorAll('[data-link]');
+  if (filterBtn) {
+    filterBtn.forEach(btn => btn.addEventListener('click', followTheLink))
   }
 }
 // Функция формирования и рендеринга сетки карточек
@@ -133,12 +153,37 @@ document.addEventListener('DOMContentLoaded', () => {
       const PAGE_INFO_URL = data.object;
 
       pageInfo(PAGE_INFO_URL.page);
-      tagsGrid(PAGE_INFO_URL.page);
+
+      tagsGridHome(PAGE_INFO_URL.page);
+
 
       projectsGrid(PAGE_INFO_URL.cases);
+
+      const nameTag = localStorage.getItem('lastVisitedLink');
+      if (nameTag) {
+        tagsGrid(PAGE_INFO_URL.page);
+        document.querySelectorAll('.filter__btn').forEach(item => {
+          console.log(item);
+
+          if (item.dataset.tag === nameTag) {
+            item.classList.add('_active')
+          }
+        })
+        const filteredCardsSaveActiveTag = data.object.cases.filter(data => data.main_screen.industries[0] === nameTag);
+        projectsGrid(filteredCardsSaveActiveTag);
+        localStorage.removeItem('lastVisitedLink');
+      } else {
+        tagsGrid(PAGE_INFO_URL.page);
+      }
+
 
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
-})
+});
+
+
+// Функция для сохранения тега сразу
+
+

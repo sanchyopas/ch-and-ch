@@ -693,32 +693,32 @@
     margin-left: 24px;
   }
 
-  /* Для браузеров на основе Webkit (Chrome, Safari, Edge) */
+  // /* Для браузеров на основе Webkit (Chrome, Safari, Edge) */
   &::-webkit-scrollbar {
     width: 5px;
     /* ширина скроллбара */
-    height: 5px;
+    height: 0px;
     /* для горизонтального скроллбара */
   }
 
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    /* цвет ползунка (thumb) */
-    border-radius: 10px;
-    /* закругление */
-  }
+  // &::-webkit-scrollbar-thumb {
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   /* цвет ползунка (thumb) */
+  //   border-radius: 10px;
+  //   /* закругление */
+  // }
 
-  &::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1);
-    /* цвет фона скроллбара */
-    border-radius: 10px;
-  }
+  // &::-webkit-scrollbar-track {
+  //   background-color: rgba(0, 0, 0, 0.1);
+  //   /* цвет фона скроллбара */
+  //   border-radius: 10px;
+  // }
 
-  /* Для Firefox */
-  scrollbar-width: thin;
-  /* тонкий скроллбар */
-  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
-  /* thumb и track */
+  // /* Для Firefox */
+  // scrollbar-width: thin;
+  // /* тонкий скроллбар */
+  // scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+  // /* thumb и track */
 
   // .filter__inner
 

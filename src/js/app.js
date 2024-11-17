@@ -6,6 +6,7 @@ import './modules/burger.js'
 import './modules/api.js'
 import './modules/coockie.js'
 import './modules/mask.js'
+import './modules/follow_link.js'
 
 functions.isWebp();
 
