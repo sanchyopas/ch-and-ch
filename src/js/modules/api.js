@@ -75,7 +75,7 @@ const tagsGrid = (data) => {
 
 const tagsGridHome = (data) => {
   const tagsHtml = data.filter_industries.map(tag => {
-    return `<a href="/projects.html/${tag.tag}" data-link class="filter__btn">
+    return `<a href="/projects/${tag.tag}" data-link class="filter__btn">
         ${tag.icon != "" ? `<img src="${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
         <span>${tag.tag}</span>
       </a>`
