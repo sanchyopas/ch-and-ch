@@ -5,6 +5,7 @@ import './modules/popup.js'
 import './modules/burger.js'
 import './modules/api.js'
 import './modules/coockie.js'
+import './modules/mask.js'
 
 functions.isWebp();
 
@@ -12,8 +13,9 @@ functions.isWebp();
 // Переключатель карты
 const showMap = (e) => {
   console.log('click');
-
-  document.querySelectorAll('.map').forEach(map => map.classList.remove('_active'));
+  document.querySelectorAll('[data-id]').forEach(btn => btn.classList.remove('_active'));
+  e.currentTarget.classList.add('_active');
+  document.querySelectorAll('.map__content').forEach(map => map.classList.remove('_active'));
   document.getElementById(e.currentTarget.dataset.id).classList.add('_active');
 }
 

@@ -1,68 +1,74 @@
 <section class="contact _padded-section" id="contact">
   <div class="container">
     <h2 class="contact__title _title">Контакты</h2>
-    <div class="contact__map map" data-index="1">
+    <div class="contact__map map">
       <div class="map__head">
         <div class="map__tabs">
-          <button type="button" class="map__btn _btn _active" data-id="moskow">Москва</button>
-          <button type="button" class="map__btn _btn" data-id="ryazan">Рязань</button>
+          <button type="button" class="map__btn _btn _active" data-id="map-1">Москва</button>
+          <button type="button" class="map__btn _btn" data-id="map-2">Рязань</button>
         </div>
-        <a href="" class="map__link _btn">
-          <span>Открыть в Яндекс Картах</span>
-          <img src="@img/icons/Link.svg" alt="" />
-        </a>
       </div>
-      <div class="map__contact">
-        <p class="map__text">
-          Московская область, Раменский район, <br />
-          п. Денежниково, стр. 30, 140164
-        </p>
-        <div class="map__contact-phone">
-          <a href="tel:+78002504060">8-800-250-40-60 <span>(доб. 1)</span></a>
-          <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
+      <div class="map__content _active" id="map-1">
+        <div class="map__content-inner">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3e291043d8f0c8931df5122e4e2ea0dfe6d8013a3b09f242af8f580434c5d000&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+          <a href="" class="map__link">
+            <span>Открыть в Яндекс Картах</span>
+            <img src="@img/icons/Link.svg" alt="" />
+          </a>
         </div>
-        <div class="map__contact-phone">
-          <a href="tel:+79209753019">+7-920-975-30-19</a>
-          <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
+        <div class="map__contact">
+          <p class="map__text">
+            Московская область, Раменский район, <br />
+            п. Денежниково, стр. 30, 140164
+          </p>
+          <div class="map__contact-phone">
+            <a href="tel:+78002504060">8-800-250-40-60 <span>(доб. 1)</span></a>
+            <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
+          </div>
+          <div class="map__contact-phone">
+            <a href="tel:+79209753019">+7-920-975-30-19</a>
+            <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
+          </div>
+          <div class="map__contact-actions">
+            <a href="">sale@chch.pro</a>
+            <a href="">telegram</a>
+          </div>
         </div>
-        <div class="map__contact-actions">
-          <a href="">sale@chch.pro</a>
-          <a href="">telegram</a>
+      </div>
+      <div class="map__content" id="map-2">
+        <div class="map__content-inner">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32df8d08283d81403c35e8dd7431559b6434667e6f4cb1f4fc5c9d7e04b22291&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;scroll=true"></script>
+          <a href="" class="map__link">
+            <span>Открыть в Яндекс Картах</span>
+            <img src="@img/icons/Link.svg" alt="" />
+          </a>
+        </div>
+        <div class="map__contact">
+          <p class="map__text">
+            Рязанская область, Рязанский район,<br />
+            с. Поляны, ул. Терехина, д. 14, 390525
+          </p>
+          <div class="map__contact-phone">
+            <a href="tel:+78002504060">8-800-250-40-60<span>(доб. 1)</span></a>
+            <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
+          </div>
+          <div class="map__contact-phone">
+            <a href="tel:+79209753019">+7-920-975-30-19</a>
+            <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
+          </div>
+          <div class="map__contact-actions">
+            <a href="">sale@chch.pro</a>
+            <a href="">telegram</a>
+          </div>
         </div>
       </div>
     </div>
-    <!-- <div class="contact__map map" id="ryazan">
-      <div class="map__head">
-        <scripts></scripts>
-        <div class="map__tabs" id="map-tab">
-          <div class="map__tabs">
-            <button type="button" class="map__btn _btn" data-id="moskow">Москва</button>
-            <button type="button" class="map__btn _btn _active" data-id="ryazan">Рязань</button>
-          </div>
-        </div>
-        <a href="" class="map__link _btn">
-          <span>Открыть в Яндекс Картах</span>
-          <img src="@img/icons/Link.svg" alt="" />
-        </a>
-      </div>
-      <div class="map__contact">
-        <p class="map__text">
-          Рязанская область, Рязанский район,<br />
-          с. Поляны, ул. Терехина, д. 14, 390525
-        </p>
-        <div class="map__contact-phone">
-          <a href="tel:+78002504060">8-800-250-40-60<span>(доб. 1)</span></a>
-          <p class="map__text map__text--opacity">Отдел продаж, с 9:00 до 18:00, по будням</p>
-        </div>
-        <div class="map__contact-phone">
-          <a href="tel:+79209753019">+7-920-975-30-19</a>
-          <p class="map__text map__text--opacity">Кристина Разахова, директор по развитию</p>
-        </div>
-        <div class="map__contact-actions">
-          <a href="">sale@chch.pro</a>
-          <a href="">telegram</a>
-        </div>
-      </div>
-    </div> -->
   </div>
 </section>
+
+<!-- <script type="text/javascript" charset="utf-8" async
+  src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3e291043d8f0c8931df5122e4e2ea0dfe6d8013a3b09f242af8f580434c5d000&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;scroll=true"></script> -->
+
+<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A32df8d08283d81403c35e8dd7431559b6434667e6f4cb1f4fc5c9d7e04b22291&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;scroll=true"></script> -->
