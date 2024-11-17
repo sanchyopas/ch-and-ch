@@ -176,6 +176,7 @@ body::after {
 
 .popup__submit {
   width: 200px;
+  transition: none !important;
 
   @media screen and (max-width: 480px) {
     width: 100%;

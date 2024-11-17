@@ -19,10 +19,13 @@ function getCookie(name) {
 }
 
 // Скрыть форму и сохранить согласие в cookie
-document.getElementById('accept-consent').addEventListener('click', () => {
-  setCookie('userConsent', 'accepted', 365); // Сохраняем согласие на 1 год
-  document.getElementById('coockie').style.display = 'none';
-});
+const btnCloseCoockie = document.getElementById('accept-consent');
+if (btnCloseCoockie) {
+  btnCloseCoockie.addEventListener('click', () => {
+    setCookie('userConsent', 'accepted', 365); // Сохраняем согласие на 1 год
+    document.getElementById('coockie').style.display = 'none';
+  });
+}
 
 // Проверить наличие согласия в cookie
 window.addEventListener('load', () => {
