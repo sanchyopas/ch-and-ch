@@ -108,7 +108,7 @@ const projectsGrid = (data) => {
 
   } else {
     const gridHtml = `
-      <div class="empty">Пусто</div>
+      <div class="empty">Не найдено</div>
     `
     if (document.getElementById('projects-grid')) {
       document.getElementById('projects-grid').classList.add('_no-grid');
