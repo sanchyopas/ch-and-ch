@@ -10,6 +10,12 @@ import './modules/follow_link.js'
 
 functions.isWebp();
 
+const appHeight = () => {
+  const doc = document.documentElement
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight()
 
 // Переключатель карты
 const showMap = (e) => {
@@ -25,7 +31,3 @@ const mapTabBtn = document.querySelectorAll('[data-id]');
 if (mapTabBtn) {
   mapTabBtn.forEach(btn => btn.addEventListener('click', showMap))
 }
-
-
-
-

@@ -26,6 +26,16 @@
 @import "pages/error-page.scss";
 @import "components/btn.scss";
 
+:root {
+  --app-height: 100%;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+}
+
 * {
   outline: none;
   box-sizing: border-box;

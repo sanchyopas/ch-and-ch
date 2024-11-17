@@ -116,7 +116,7 @@ const projectsGrid = (data) => {
               </div>
               <div class="card__count">
                 <p class="card__number">${main_screen.preview_numbers}</p>
-                <p class="card__text">${main_screen.subtitle}</p>
+                <p class="card__text">${main_screen.preview_text}</p>
               </div>
             </div>
           </div>`;
