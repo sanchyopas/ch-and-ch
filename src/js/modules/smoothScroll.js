@@ -7,7 +7,7 @@ import { bodyUnLock } from "./functions.js";
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('.nav__link');
+  const links = document.querySelectorAll('[data-anchor]');
   const isMainPage = window.location.pathname === "/";
 
   // Функция для плавного скролла к элементу

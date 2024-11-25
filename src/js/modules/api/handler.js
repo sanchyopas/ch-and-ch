@@ -1,6 +1,6 @@
-import { fetchData } from './api.js';
-import { renderProjectsGrid } from './render.js';
-import { lockBody, unlockBody, toggleLoader } from './utils.js';
+import { fetchData } from "./api.js";
+import { renderProjectsGrid } from "./render.js";
+import { lockBody, unlockBody, toggleLoader } from "./utils.js";
 
 /**
  *** Данный обработчик выполняет фильтрацию карточек
@@ -12,8 +12,8 @@ import { lockBody, unlockBody, toggleLoader } from './utils.js';
 export const handleTagFilter = async (e, url) => {
   e.preventDefault();
   const tag = e.currentTarget.dataset.tag;
-  document.querySelectorAll('.filter__btn').forEach(btn => btn.classList.remove('_active'));
-  e.currentTarget.classList.add('_active');
+  document.querySelectorAll('.filter__btn').forEach(btn => btn.classList.remove("_active"));
+  e.currentTarget.classList.add("_active");
 
   lockBody();
   toggleLoader(true);
@@ -23,7 +23,7 @@ export const handleTagFilter = async (e, url) => {
     const filteredCards = data.object.cases.filter(item => item.main_screen?.industries[0] === tag);
     renderProjectsGrid(filteredCards);
   } catch (error) {
-    console.error('Error filtering cards:', error);
+    console.error("Error filtering cards:", error);
   } finally {
     unlockBody();
     toggleLoader(false);
