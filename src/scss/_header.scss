@@ -250,7 +250,7 @@
 }
 
 .nav {
-  width: 100%;
+  width: calc(100% - 86px);
   display: flex;
   align-items: center;
   justify-content: space-between;

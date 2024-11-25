@@ -1,7 +1,7 @@
 import { bodyLock, bodyUnLock } from "./functions.js"
 import { followTheLink } from "./follow_link.js";
 
-const URL_CASES = "https://test-2422i.fresco.bz/api/cases";
+const URL_CASES = "https://chch.pro/api/cases";
 
 // Функиця загрузки заголовков, и прочего на сайт
 const pageInfo = (data) => {
@@ -58,7 +58,7 @@ const filteringСards = (e) => {
 const tagsGrid = (data) => {
   const tagsHtml = data.filter_industries.map(tag => {
     return `<button type="button" data-tag="${tag.tag}" class="filter__btn">
-        ${tag.icon != "" ? `<img src="${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
+        ${tag.icon != "" ? `<img src="https://chch.pro/${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
         <span>${tag.tag}</span>
       </button>`
   }).join('');
@@ -76,7 +76,7 @@ const tagsGrid = (data) => {
 const tagsGridHome = (data) => {
   const tagsHtml = data.filter_industries.map(tag => {
     return `<a href="/projects/${tag.tag}" data-link class="filter__btn">
-        ${tag.icon != "" ? `<img src="${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
+        ${tag.icon != "" ? `<img src="https://chch.pro/${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
         <span>${tag.tag}</span>
       </a>`
   }).join('');
@@ -101,22 +101,22 @@ const projectsGrid = (data) => {
 
       return `
           <div class="projects__card card">
-            <div class="card__bg" style="background-image: url(${main_screen.preview})"></div>
+            <div class="card__bg" style="background-image: url(https://chch.pro/${main_screen.preview})"></div>
             <a href="/projects/${alias}" class="card__link"></a>
             <div class="card__content">
               <div class="tags">
                 ${main_screen.preview_tag.map(tag => {
         return `
                     <a href="" class="tag">
-                      ${tag.icon != null ? `<img src="${tag.icon}" alt="${tag.tag}">` : ""}
+                      ${tag.icon != null ? `<img src="https://chch.pro/${tag.icon}" alt="${tag.tag}">` : ""}
                       <span>${tag.tag}</span>
                     </a>
                   `
       }).join('')}
               </div>
               <div class="card__count">
-                <p class="card__number">${main_screen.preview_numbers}</p>
-                <p class="card__text">${main_screen.preview_text}</p>
+                ${main_screen.preview_numbers != null ? `<p class="card__number">${main_screen.preview_numbers}</p>` : ""}
+                ${main_screen.preview_text != null ? `<p class="card__text">${main_screen.preview_text}</p>` : ""}
               </div>
             </div>
           </div>`;
