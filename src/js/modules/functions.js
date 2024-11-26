@@ -1,5 +1,6 @@
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML */
 import events from "events";
+import {checkLocal} from "./changeLocale.js";
 
 export function isWebp() {
 	// Проверка поддержки webp
@@ -32,3 +33,30 @@ export const bodyUnLock = (e) => {
 	document.querySelector('.header').style.marginRight = '0px';
 	document.documentElement.classList.remove('_lock');
 }
+
+/**
+**** Код ниже выполнят проверку "локализации"
+ * для локальной разработки раскоментировать первую переменную path, а вторую закоментировать
+*/
+export const LOCALE_RU = "/ru/";
+export const LOCALE_EN = "/en/";
+
+//const path = "https://test-2422i.fresco.bz/en/"; //Для локальной разработки тестил
+
+const path = window.location.href;
+
+window.addEventListener("DOMContentLoaded", () => {
+	checkLocal(path);
+});
+
+document.querySelectorAll(".header__lang")?.forEach(link => {
+	link.addEventListener("click", (e) => {
+		e.preventDefault();
+		checkLocal(link.href);
+		window.location.href = link.href;
+	})
+});
+
+
+
+

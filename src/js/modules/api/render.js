@@ -13,7 +13,7 @@ export const renderPageInfo = (data) => {
 
 export const renderTags = (tags, containerId, callback) => {
   const container = document.getElementById(containerId);
-  if (container) {
+  if (container && Array.isArray(tags)) {
     const tagsHtml = tags.map(tag => `
       <button type="button" data-tag="${tag.tag}" class="filter__btn">
         ${tag.icon ? `<img src="https://chch.pro/${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}

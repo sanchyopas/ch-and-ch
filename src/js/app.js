@@ -19,7 +19,6 @@ appHeight()
 
 // Переключатель карты
 const showMap = (e) => {
-  console.log('click');
   document.querySelectorAll('[data-id]').forEach(btn => btn.classList.remove('_active'));
   e.currentTarget.classList.add('_active');
   document.querySelectorAll('.map__content').forEach(map => map.classList.remove('_active'));

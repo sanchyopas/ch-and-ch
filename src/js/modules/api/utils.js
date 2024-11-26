@@ -1,10 +1,11 @@
 /**
 *** Вспомогательные функции
 **/
+import {LOCALE_EN} from "../functions.js";
 
 // Функция проверяет строку на содержание eng в url адресе
 export const checkUrlEn = () =>{
-    return window.location.href.includes("/en/") ? "https://chch.pro/api/eng/cases" : "https://chch.pro/api/cases";
+    return window.location.href.includes(LOCALE_EN) ? `/api${LOCALE_EN}cases` : "/api/cases";
 }
 
 // Функция блокирует скролл body

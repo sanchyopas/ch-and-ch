@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const data = await fetchData(url);
     const {page, cases} = data.object;
-
-    renderPageInfo(page);
     renderTags(page.filter_industries, 'tags', (e) => handleTagFilter(e, url));
     renderProjectsGrid(cases);
   } catch (error) {
