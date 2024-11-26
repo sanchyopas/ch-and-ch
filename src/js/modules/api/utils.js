@@ -4,7 +4,7 @@
 
 // Функция проверяет строку на содержание eng в url адресе
 export const checkUrlEn = () =>{
-    return window.location.href.includes("eng") ? "https://chch.pro/api/eng/cases" : "https://chch.pro/api/cases";
+    return window.location.href.includes("/en/") ? "https://chch.pro/api/eng/cases" : "https://chch.pro/api/cases";
 }
 
 // Функция блокирует скролл body
