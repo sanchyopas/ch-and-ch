@@ -29,7 +29,7 @@ export const renderProjectsGrid = (data) => {
   if (!grid) return;
 
   if (data.length === 0) {
-    grid.innerHTML = `<div class="empty">Не найдено</div>`;
+    grid.innerHTML = `<div class="empty">Скоро здесь появятся проекты</div>`;
     grid.classList.add('_no-grid');
     return;
   }
