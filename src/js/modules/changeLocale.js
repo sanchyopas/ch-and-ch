@@ -9,9 +9,12 @@ export const updateLanguageSettings = (local, nodeList) => {
 
 export const checkLocal = (path) => {
   const links = document.querySelectorAll("[data-anchor]");
-  if (path.includes(LOCALE_EN)){
+  const linkTags = document.querySelectorAll(".filter__btn");
+  if (path.includes(LOCALE_EN)) {
     updateLanguageSettings(LOCALE_EN, links);
-  }else{
+    updateLanguageSettings(LOCALE_EN, linkTags);
+  } else {
     updateLanguageSettings("/", links);
+    updateLanguageSettings("/", linkTags);
   }
 }

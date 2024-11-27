@@ -13,12 +13,28 @@ export const renderPageInfo = (data) => {
 
 export const renderTags = (tags, containerId, callback) => {
   const container = document.getElementById(containerId);
+
   if (container && Array.isArray(tags)) {
     const tagsHtml = tags.map(tag => `
       <button type="button" data-tag="${tag.tag}" class="filter__btn">
         ${tag.icon ? `<img src="/${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
         <span>${tag.tag}</span>
       </button>`).join('');
+    container.innerHTML = tagsHtml;
+    container.querySelectorAll('.filter__btn').forEach(btn => btn.addEventListener('click', callback));
+  }
+};
+
+export const renderTagsHome = (tags, containerId, callback) => {
+  const container = document.getElementById(containerId);
+
+  if (container && Array.isArray(tags)) {
+    const getLocale = localStorage.getItem("locale");
+    const tagsHtml = tags.map(tag => `
+      <a href="${getLocale}projects/"  data-tag="${tag.tag}" class="filter__btn">
+        ${tag.icon ? `<img src="/${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
+        <span>${tag.tag}</span>
+      </a>`).join('');
     container.innerHTML = tagsHtml;
     container.querySelectorAll('.filter__btn').forEach(btn => btn.addEventListener('click', callback));
   }

@@ -29,3 +29,11 @@ export const handleTagFilter = async (e, url) => {
     toggleLoader(false);
   }
 };
+
+export const handleSaveTagState = (e) => {
+  e.preventDefault();
+  localStorage.setItem("tag", e.currentTarget.dataset.tag);
+  window.location.href = e.currentTarget.href;
+};
+
+

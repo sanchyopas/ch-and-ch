@@ -5,7 +5,7 @@ import {LOCALE_EN} from "../functions.js";
 
 // Функция проверяет строку на содержание eng в url адресе
 export const checkUrlEn = () =>{
-    return window.location.href.includes(LOCALE_EN) ? `http://test-2422i.fresco.bz/api${LOCALE_EN}cases` : "http://test-2422i.fresco.bz/api/cases";
+    return window.location.href.includes(LOCALE_EN) ? `/api${LOCALE_EN}cases` : "/api/cases";
 }
 
 // Функция блокирует скролл body
