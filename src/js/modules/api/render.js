@@ -16,7 +16,7 @@ export const renderTags = (tags, containerId, callback) => {
   if (container && Array.isArray(tags)) {
     const tagsHtml = tags.map(tag => `
       <button type="button" data-tag="${tag.tag}" class="filter__btn">
-        ${tag.icon ? `<img src="https://chch.pro/${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
+        ${tag.icon ? `<img src="/${tag.icon}" alt="${tag.tag}">` : `<img src="img/icons/Restaurant.svg" alt="" />`}
         <span>${tag.tag}</span>
       </button>`).join('');
     container.innerHTML = tagsHtml;
@@ -36,13 +36,13 @@ export const renderProjectsGrid = (data) => {
 
   const gridHtml = data.map(item => `
     <div class="projects__card card">
-      <div class="card__bg" style="background-image: url(https://chch.pro/${item.main_screen.preview})"></div>
-      <a href="/projects/${item.alias}" class="card__link"></a>
+      <div class="card__bg" style="background-image: url(/${item.main_screen.preview})"></div>
+      <a href="${localStorage.getItem('locale')}projects/${item.alias}" class="card__link"></a>
       <div class="card__content">
         <div class="tags">
           ${item.main_screen.preview_tag.map(tag => `
             <a href="" class="tag">
-              ${tag.icon ? `<img src="https://chch.pro/${tag.icon}" alt="${tag.tag}">` : ""}
+              ${tag.icon ? `<img src="/${tag.icon}" alt="${tag.tag}">` : ""}
               <span>${tag.tag}</span>
             </a>`).join('')}
         </div>
