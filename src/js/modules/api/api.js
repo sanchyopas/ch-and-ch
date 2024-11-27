@@ -5,6 +5,7 @@
 export const fetchData = async (url) => {
   try {
     const response = await fetch(url);
+
     if (!response.ok) {
       throw new Error(`Erorr: ${response.status}`);
     }
