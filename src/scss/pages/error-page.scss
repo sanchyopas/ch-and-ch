@@ -1,11 +1,18 @@
 .error-page {
+  height: 100%;
+
+  .container{
+    height: 100%;
+  }
 
   // .error-page__inner
 
   &__inner {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
 
