@@ -1638,6 +1638,7 @@
   }
 }
 
+
 .thumbs-slider {
   width: 100%;
   display: block;
@@ -1649,6 +1650,12 @@
 
   @media screen and (max-width: 768px) {
     bottom: 8px;
+  }
+
+  //.thumbs-slider__wrapper
+
+  &__wrapper{
+    justify-content: center;
   }
 
   // .thumbs-slider__slide
