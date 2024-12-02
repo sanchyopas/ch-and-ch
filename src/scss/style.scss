@@ -3,6 +3,7 @@
 // Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap-grid';
 @import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/swiper-bundle.css';
 
 // Шрифты
 // Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
@@ -30,9 +31,7 @@
   --app-height: 100%;
 }
 
-.hidden {
-  display: none !important;
-}
+
 
 @supports (-webkit-touch-callout: none) {
   .h-screen {

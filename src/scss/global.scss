@@ -33,6 +33,10 @@ button {
   cursor: pointer;
 }
 
+.hidden {
+  display: none !important;
+}
+
 main {
   &.main-top-margin {
     margin-top: 80px;

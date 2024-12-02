@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // init Swiper:
   const project_slider = new Swiper(".project__slider", {
     modules: [Navigation, Pagination, Controller, Thumbs, EffectFade],
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: false,
     spaceBetween: 24,
     autoHeight: false,
@@ -60,11 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       // when window width is >= 480px
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
     },
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const a = container.querySelector(".thumbs-slider");
     if(slides.length < 2){
       a.classList.add("hidden");
+      container.querySelector(".swiper-navigation").classList.add("hidden");
     }else{
       const thumbsSlider = new Swiper(container.querySelector(".thumbs-slider"), {
         spaceBetween: 10,
@@ -99,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
         navigation: {
-          nextEl: container.querySelector(".interiors-slider-next"), // Привязываем локальные элементы навигации
-          prevEl: container.querySelector(".interiors-slider-prev"),
+          nextEl: container.querySelector(".swiper-button-next"), // Привязываем локальные элементы навигации
+          prevEl: container.querySelector(".swiper-button-prev"),
         },
         thumbs: {
           swiper: thumbsSlider, // Привязываем текущий thumbsSlider

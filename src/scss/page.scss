@@ -68,7 +68,7 @@
       margin-top: 40px;
     }
 
-    @media (hover:hover) {
+    @media (hover: hover) {
       &:hover {
         background-color: rgba($color: #ffffff, $alpha: 1.0);
         color: rgba($color: #141414, $alpha: 1.0);
@@ -246,7 +246,8 @@
 
   // .invite__title
 
-  &__title {}
+  &__title {
+  }
 
   // .invite__subtitle
 
@@ -306,7 +307,7 @@
     background: rgba(255, 255, 255, 0.3);
     color: #ffffff;
 
-    @media (hover:hover) {
+    @media (hover: hover) {
       &:hover {
         background-color: rgba($color: #ffffff, $alpha: 1.0);
         color: rgba($color: #141414, $alpha: 1.0);
@@ -349,7 +350,7 @@
 
   overflow: hidden;
 
-  @media (hover:hover) {
+  @media (hover: hover) {
     &:hover {
       .card__bg {
         transform: scale(1.05);
@@ -551,18 +552,18 @@
 }
 
 
-
-
 .projects {
   overflow: hidden;
 
   // .projects__inner
 
-  &__inner {}
+  &__inner {
+  }
 
   // .projects__title
 
-  &__title {}
+  &__title {
+  }
 
   // .projects__subtitle
   &__subtitle {
@@ -575,7 +576,8 @@
 
   // .projects__filter
 
-  &__filter {}
+  &__filter {
+  }
 
   // .projects__grid
 
@@ -633,7 +635,8 @@
 
   // .projects__button
 
-  &__button {}
+  &__button {
+  }
 
   // .projects__btn
 
@@ -642,7 +645,7 @@
     background: rgba(101, 104, 76, 0.1);
     color: rgb(101, 104, 76);
 
-    @media (hover:hover) {
+    @media (hover: hover) {
       &:hover {
         background-color: #65684c;
         color: #fff !important;
@@ -732,7 +735,7 @@
     gap: 24px;
     flex-wrap: nowrap;
 
-    &:before ,
+    &:before,
     &:after {
       content: "1";
       display: block;
@@ -756,8 +759,6 @@
   }
 
 
-
-
   // .filter__btn
 
   &__btn {
@@ -776,7 +777,7 @@
     line-height: 150%;
     transition: .3s;
 
-    @media (hover:hover) {
+    @media (hover: hover) {
       &:hover {
         background: rgba(101, 104, 76, 0.15);
       }
@@ -863,7 +864,7 @@
       margin-top: 40px;
     }
 
-    @media (hover:hover) {
+    @media (hover: hover) {
       &:hover {
         background-color: rgba($color: #ffffff, $alpha: 1.0);
         color: rgba($color: #141414, $alpha: 1.0);
@@ -952,7 +953,8 @@
 
   // .step__parag
 
-  &__parag {}
+  &__parag {
+  }
 }
 
 .doc {
@@ -960,7 +962,8 @@
 
   // .doc__title
 
-  &__title {}
+  &__title {
+  }
 
   // .doc__grid
 
@@ -990,7 +993,8 @@
 
   // .grid-doc__item
 
-  &__item {}
+  &__item {
+  }
 
   // .grid-doc__title
 
@@ -1045,7 +1049,7 @@
           transition: 0.3s;
 
 
-          @media (hover:hover) {
+          @media (hover: hover) {
             &:hover {
               text-decoration-color: rgba(101, 104, 76, 1);
             }
@@ -1067,7 +1071,6 @@
     }
   }
 }
-
 
 
 // .text-mask-container {
@@ -1133,7 +1136,6 @@
     }
 
 
-
     .tags {
       gap: 24px;
 
@@ -1158,7 +1160,8 @@
 
   // .project__title
 
-  &__title {}
+  &__title {
+  }
 
   // .project__subtitle
 
@@ -1209,7 +1212,8 @@
 
   // .project__swiper-wrapper
 
-  &__swiper-wrapper {}
+  &__swiper-wrapper {
+  }
 
   // .project__slide
 
@@ -1254,11 +1258,14 @@
     position: relative;
   }
 
-  .swiper {}
+  .swiper {
+  }
 
-  .swiper-wrapper {}
+  .swiper-wrapper {
+  }
 
-  .swiper-slide {}
+  .swiper-slide {
+  }
 
   .swiper-navigation {
     position: absolute;
@@ -1294,7 +1301,7 @@
       color: rgba($color: #ffffff, $alpha: 1.0);
     }
 
-    @media (hover:hover) {
+    @media (hover: hover) {
       &:hover {
         background: rgba(255, 255, 255, 1);
 
@@ -1305,7 +1312,8 @@
     }
   }
 
-  .swiper-button-next {}
+  .swiper-button-next {
+  }
 
   .swiper-pagination {
     position: relative;
@@ -1360,6 +1368,7 @@
       line-height: 1.5;
       color: rgba(20, 20, 20, 0.8);
     }
+
     p {
       & + p {
         margin-top: 16px;
@@ -1372,7 +1381,8 @@
 
   // .indicators__inner
 
-  &__inner {}
+  &__inner {
+  }
 
   // .indicators__row
 
@@ -1388,7 +1398,8 @@
 
   // .indicators__card
 
-  &__card {}
+  &__card {
+  }
 }
 
 .card-indicator {
@@ -1465,7 +1476,8 @@
 
   // .list__list
 
-  &__list {}
+  &__list {
+  }
 
   // .list__item
 
@@ -1475,7 +1487,7 @@
     font-weight: 400;
     line-height: 150%;
 
-    &+& {
+    & + & {
       margin-top: 16px;
     }
   }
@@ -1505,18 +1517,22 @@
 }
 
 .interiors-slider {
-  position: relative;
+  position: relative !important;
   user-select: none;
+
   * {
     user-select: none;
   }
+
   // .interiors-slider__slider
 
-  &__slider {}
+  &__slider {
+  }
 
   // .interiors-slider__wrapper
 
-  &__wrapper {}
+  &__wrapper {
+  }
 
   // .interiors-slider__slide
 
@@ -1557,11 +1573,14 @@
     }
   }
 
-  .swiper {}
+  .swiper {
+  }
 
-  .swiper-wrapper {}
+  .swiper-wrapper {
+  }
 
-  .swiper-pagination {}
+  .swiper-pagination {
+  }
 
   .swiper-navigation {
     @media screen and (max-width: 768px) {
@@ -1569,14 +1588,54 @@
     }
   }
 
-  .swiper-button-prev {}
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 60px;
+    height: 60px;
+    margin-top: 0px;
+    border-radius: 40px;
+    backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.2);
+    transition: $animation_speed;
 
-  .swiper-button-next {}
 
-  .swiper-container {}
+    &::after {
+      font-size: 10px;
+      color: rgba($color: #ffffff, $alpha: 1.0);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: rgba(255, 255, 255, 1);
+
+        &::after {
+          color: rgba($color: #141313, $alpha: 1.0);
+        }
+      }
+    }
+  }
+
+  .interiors_navigation{
+    @media screen and (max-width: 768px){
+      display: none;
+    }
+  }
 
 
-  .swiper-slide {}
+  .swiper-button-next {
+    right: 40px;
+  }
+
+  .swiper-button-prev{
+    left: 40px;
+  }
+
+  .swiper-container {
+  }
+
+
+  .swiper-slide {
+  }
 }
 
 .thumbs-slider {
@@ -1651,7 +1710,7 @@
     color: rgba($color: #ffffff, $alpha: 1.0);
   }
 
-  @media (hover:hover) {
+  @media (hover: hover) {
     &:hover {
       background: rgba(255, 255, 255, 1);
 
@@ -1664,12 +1723,14 @@
 
 .single_project_page {
   ul,
-  ol{
+  ol {
     margin-left: 24px;
   }
+
   ul li {
     list-style: initial;
   }
+
   li + li {
     margin-top: 16px;
   }
