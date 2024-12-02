@@ -30,3 +30,84 @@ const mapTabBtn = document.querySelectorAll('[data-id]');
 if (mapTabBtn) {
   mapTabBtn.forEach(btn => btn.addEventListener('click', showMap))
 }
+
+
+import Swiper from 'swiper';
+import {Navigation, Pagination, Controller, Thumbs, EffectFade} from 'swiper/modules';
+
+document.addEventListener("DOMContentLoaded", () => {
+  // init Swiper:
+  const project_slider = new Swiper(".project__slider", {
+    modules: [Navigation, Pagination, Controller, Thumbs, EffectFade],
+    slidesPerView: 3,
+    loop: false,
+    spaceBetween: 24,
+    autoHeight: false,
+    effect: "fade",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+
+
+  document.querySelectorAll(".interiors-slider").forEach(container => {
+    const slides = container.querySelectorAll(".interiors-slider__slide");
+    const a = container.querySelector(".thumbs-slider");
+    if(slides.length < 2){
+      a.classList.add("hidden");
+    }else{
+      const thumbsSlider = new Swiper(container.querySelector(".thumbs-slider"), {
+        spaceBetween: 10,
+        slidesPerView: "auto",
+        loop: true,
+        initialSlide: 1,
+      });
+
+      // Инициализируем основной слайдер
+      new Swiper(container.querySelector(".interiors-slider__slider"), {
+        modules: [Navigation, Pagination, Controller, Thumbs, EffectFade],
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 24,
+        autoHeight: false,
+        effect: "fade",
+        on: {
+          init: function () {
+            console.log("Swiper initialized", this);
+          },
+        },
+        navigation: {
+          nextEl: container.querySelector(".interiors-slider-next"), // Привязываем локальные элементы навигации
+          prevEl: container.querySelector(".interiors-slider-prev"),
+        },
+        thumbs: {
+          swiper: thumbsSlider, // Привязываем текущий thumbsSlider
+        },
+      });
+    }
+
+  });
+})
+

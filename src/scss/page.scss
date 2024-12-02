@@ -1322,6 +1322,7 @@
   }
 
   .swiper-pagination-bullet {
+    height: 4px;
     flex: 1;
     background-color: rgba($color: #65684C, $alpha: .2);
     opacity: 1;
@@ -1525,6 +1526,7 @@
     height: 100vh;
     height: var(--app-height);
     min-height: 240px;
+    transition: .3s;
 
     &:after {
       content: '';
