@@ -134,6 +134,9 @@
     margin: 0 auto;
     text-align: center;
     position: relative;
+    @media screen and (min-width: 1200px) {
+      max-width: 1085px;
+    }
   }
 
   // .offer__title
@@ -1355,6 +1358,11 @@
       font-size: 16px;
       line-height: 1.5;
       color: rgba(20, 20, 20, 0.8);
+    }
+    p {
+      & + p {
+        margin-top: 16px;
+      }
     }
   }
 }
