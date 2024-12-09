@@ -57,7 +57,7 @@ export const renderProjectsGrid = (data) => {
       <div class="card__content">
         <div class="tags">
           ${item.main_screen.preview_tag.map(tag => `
-            <a href="" class="tag">
+            <a href="" class="tag ${tag.icon ? "tag-light--brand-logo" : ""}">
               ${tag.icon ? `<img src="/${tag.icon.includes('upload_resources/') ? `${tag.icon}` : `upload_resources/${tag.icon}`}" alt="${tag.tag}">` : ""}
               <span>${tag.tag}</span>
             </a>`).join('')}
