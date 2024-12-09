@@ -1457,6 +1457,36 @@
     }
   }
 
+  &__content {
+    ol,
+    ul {
+
+    }
+
+    ol {
+
+    }
+
+    ul {
+
+    }
+
+    p {
+
+    }
+
+    & > * {
+      color: rgba(20, 20, 20, 0.8);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+
+      & + * {
+        margin-top: 16px;
+      }
+    }
+  }
+
   // .lists__title
 
   &__title {
@@ -1655,7 +1685,7 @@
   //.thumbs-slider__wrapper
 
   &__wrapper{
-    justify-content: center;
+    //justify-content: center;
   }
 
   // .thumbs-slider__slide

@@ -1,9 +1,12 @@
 // Normalize.css
 @import "../../node_modules/normalize.css/normalize";
+
 // Bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap-grid';
+
+// Swiper
 @import '../../node_modules/swiper/swiper';
-@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../../node_modules/swiper/swiper-bundle';
 
 // Шрифты
 // Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
@@ -30,8 +33,6 @@
 :root {
   --app-height: 100%;
 }
-
-
 
 @supports (-webkit-touch-callout: none) {
   .h-screen {
